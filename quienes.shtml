@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="OPERAMEDIOS">
+	<meta charset="UTF-8">
+	<title>OPEMEDIOS.COM.MX</title>
+	<link rel="stylesheet" href="css/opm.css" type="text/css" media="screen">
+	<style>
+		a.boton1 { background-image: url('images/botones_navegacion/inicio_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton1:hover { background-image: url('images/botones_navegacion/inicio_over.jpg');}
+		a.boton2 { background-image: url('images/botones_navegacion/quienes_down.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton2:hover { background-image: url('images/botones_navegacion/quienes_over.jpg');}
+		a.boton3 { background-image: url('images/botones_navegacion/servicios_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton3:hover { background-image: url('images/botones_navegacion/servicios_over.jpg');}
+		a.boton4 { background-image: url('images/botones_navegacion/clientes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton4:hover { background-image: url('images/botones_navegacion/clientes_over.jpg');}
+		a.boton5 { background-image: url('images/botones_navegacion/noticias_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton5:hover { background-image: url('images/botones_navegacion/noticias_over.jpg');}
+	</style>
+</head>
+
+<body cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#E0E0E0" align="center">
+	<tr>
+		<td valign="top"><img src="images/vertical_izquierda.png" width="55" height="100%"></td>
+		<td valign="top">
+			<!-- ****        Header   **** -->
+			<!--#include virtual="header.html" -->
+			<!-- ****      FIN  Header   **** -->
+			<!-- ****    Central   **** -->
+			<table cellpadding="0" cellspacing="0" border="0" width="1200">
+				<tr bgcolor="#F0EFE6" height="500">
+					<td>
+					<table>
+						<tr>
+							<td align="center" width="50%">
+								<div align="left" class="Texto">
+									Qui&eacute;nes Somos :								
+								</div>
+								<div align="left" class="Texto1">
+										Somos <b>una empresa líder en el monitoreo y análisis de medios.</b> Nuestro capital y talento humano está conformado por profesionales especializados en el área de la comunicación.									
+								</div>
+								<div align="left" class="Texto">
+									En OpeMedios nos distinguimos por nuestro servicio personalizado.
+								</div>
+								<div align="left" class="Texto_Titulo">
+									Misión :
+								</div>
+								<div align="left" class="Texto2">
+									Convertirnos en tus ojos y oídos para tu toma de decisiones.
+								</div>
+								<div align="left" class="Texto_Titulo">
+									Visión :
+								</div>
+								<div align="left" class="Texto2">
+									Seguir brindando un servicio personalizado, lo que nos ha caracterizado en los casi 20 años de trayectoria.
+								</div>
+							</td>
+							<td width="50%">
+								<div>
+									<img src="images/quienes.jpg" width="393" height="224"><br>
+								</div>
+								<br>
+								<div align="left" class="Texto_Titulo">
+									Nuestros Valores :
+								</div>
+								<div align="left" class="Texto2">
+									<ul>
+									<li><b>Comunicación:</b> Estar en estrecho contacto contigo.</li>
+									<br>
+									<li><b>Servicio:</b> Responder con responsabilidad y eficiencia las particularidades que tú necesitas.</li>
+									<br>
+									<li><b>Sensibilidad:</b> Inherente a la actividad que realizamos.</li>
+
+								</div>
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+			</table>
+			<!-- Footer **** Para todas las paginas ******* --->
+			<!--#include virtual="footer.html" -->
+			<!-- Termina Footer  -->
+		</td>
+		<td valign="top"><img src="images/vertical_derecha.png" width="55" height="100%"></td>
+	</tr>
+</table>
+</body>
+</html>

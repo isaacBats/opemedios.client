@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="OPERAMEDIOS">
+	<meta charset="UTF-8">
+	<title>OPEMEDIOS.COM.MX</title>
+	<link rel="stylesheet" href="css/opm.css" type="text/css" media="screen"/>
+	<style>
+		a.boton1 { background-image: url('images/botones_navegacion/inicio_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton1:hover { background-image: url('images/botones_navegacion/inicio_over.jpg');}
+		a.boton2 { background-image: url('images/botones_navegacion/quienes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton2:hover { background-image: url('images/botones_navegacion/quienes_over.jpg');}
+		a.boton3 { background-image: url('images/botones_navegacion/servicios_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton3:hover { background-image: url('images/botones_navegacion/servicios_over.jpg');}
+		a.boton4 { background-image: url('images/botones_navegacion/clientes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton4:hover { background-image: url('images/botones_navegacion/clientes_over.jpg');}
+		a.boton5 { background-image: url('images/botones_navegacion/noticias_down.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton5:hover { background-image: url('images/botones_navegacion/noticias_over.jpg');}
+	</style>
+</head>
+
+<body cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#E0E0E0" width="50%" align="center">
+	<tr>
+		<td valign="top"><img src="images/vertical_izquierda.png" width="55" height="100%"></td>
+		<td valign="top">
+			<!-- ****        Header   **** -->
+			<!--#include virtual="header.html" -->
+			<!-- ****      FIN  Header   **** -->
+			<!-- ****    Central   **** -->
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td>
+						&nbsp;
+					</td>
+					<td>
+						&nbsp;
+					</td>
+				</tr>
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td colspan="2">
+						&nbsp;
+					</td>
+				</tr>
+			</table>
+			<!-- Footer **** Para todas las paginas ******* --->
+			<!--#include virtual="footer.html" -->
+			<!-- Termina Footer  -->
+		</td>
+		<td valign="top"><img src="images/vertical_derecha.png" width="55" height="100%"></td>
+	</tr>
+</table>
+</body>
+</html>

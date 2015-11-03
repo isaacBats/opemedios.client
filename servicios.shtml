@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="OPERAMEDIOS">
+	<meta charset="UTF-8">
+	<title>OPEMEDIOS.COM.MX</title>
+	<link rel="stylesheet" href="css/opm.css" type="text/css" media="screen">
+	<style>
+		a.boton1 { background-image: url('images/botones_navegacion/inicio_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton1:hover { background-image: url('images/botones_navegacion/inicio_over.jpg');}
+		a.boton2 { background-image: url('images/botones_navegacion/quienes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton2:hover { background-image: url('images/botones_navegacion/quienes_over.jpg');}
+		a.boton3 { background-image: url('images/botones_navegacion/servicios_down.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton3:hover { background-image: url('images/botones_navegacion/servicios_over.jpg');}
+		a.boton4 { background-image: url('images/botones_navegacion/clientes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton4:hover { background-image: url('images/botones_navegacion/clientes_over.jpg');}
+		a.boton5 { background-image: url('images/botones_navegacion/noticias_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton5:hover { background-image: url('images/botones_navegacion/noticias_over.jpg');}
+	</style>
+</head>
+
+<body cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#E0E0E0" align="center">
+	<tr>
+		<td valign="top"><img src="images/vertical_izquierda.png" width="55" height="100%"></td>
+		<td valign="top">
+			<!-- ****    INICIO  Header   **** -->
+			<!--#include virtual="header.html" -->
+			<!-- ****      FIN  Header   **** -->
+			<table cellpadding="0" cellspacing="0" border="0" bgcolor="#a9daf4" width="1200">
+			<tr>
+			<td>
+				<div class="submenu">
+					<b>Monitoreo :</b>
+					<a href="#Electronico">&#176; Electrónico</a>					
+					<a href="#Impresos">&#176; Medios Impresos</a>						
+					<a href="#Web">&#176; Sitio Web</a>
+					<a href="#Social">&#176; Redes Sociales</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;<b>Análisis</b>
+					<a href="#Contenido">&#176; De Contenido</a>
+					<a href="#Mediatico">&#176; Cobertura Mediática</a>
+				</div>
+			</td>
+			</tr>
+			</table>
+			<!-- ****    INICIO Central   **** -->
+			<table cellpadding="0" cellspacing="0" border="0" width="1200">
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td>
+					<table border="0">
+						<tr>
+							<td align="center" width="50%">
+								<div align="left" class="Texto">
+									Monitoreo Electrónico<a name="Electronico">&nbsp;</a>
+								</div>
+								<div align="left" class="Texto2">
+									<b>Monitoreo de Radio :</b>
+								</div>
+								<div align="left" class="Texto2">
+									Durante los 365 días del año, las 24 horas, grabamos de manera continua 48 estaciones de radio en las frecuencias de AM y FM. Monitoreamos los programas más importantes de noticias, opinión, salud, espectáculos, cultura, finanzas, de portes. Contamos con personal altamente calificado, mediante el cual estaremos atentos a cualquier información directa o indirecta de su empresa, así como el comportamiento de su competencia.
+								</div>
+								<div align="left" class="Texto2">
+									<b>Monitoreo de Televisión :</b>
+								</div>
+								<div align="left" class="Texto2">
+									Grabamos las 24 horas, de lunes a domingo, los 365 días del año, 25 canales de televisión de señales abiertas y del servicio de paga. Monitoreamos los programas más importantes de noticias, opinión, salud, espectáculos, cultura, finanzas, deportes.
+								</div>								
+							</td>
+							<td width="50%">
+								<div>
+									<img src="images/monitoreo_radio.jpg" width="424" height="276"><br>
+								</div>
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td>
+						<table border="0" background="images/monitoreo_impresos.jpg" width="1200" height="516">
+						<tr>
+							<td align="center" width="50%">
+							&nbsp;
+							</td>
+							<td align="center" width="50%">
+								<div align="left" class="Texto">
+									Monitoreo de Impresos<a name="Impresos">&nbsp;</a>
+								</div>
+								<div align="left" class="Texto2">
+									<b>Monitoreo de Periódicos :</b>
+								</div>
+								<div align="left" class="Texto2">
+									Búsqueda de información en los principales diarios de circulación nacional como Reforma, El Universal, Milenio, La Jornada, Excélsior, Economista, El Financiero; Unomásuno, El Sol de México, La Crónica de Hoy, El Gráfico, Metro, Diario de México, 24 Horas, Reporte Índigo, Rumbo de México, Publimetro, entre otros.
+								</div>
+								<div align="left" class="Texto2">
+									<b>Monitoreo de Revistas :</b>
+								</div>
+								<div align="left" class="Texto2">
+									Búsqueda de información en más de 100 revistas de diferentes cortes: política, moda, espectáculos, salud, deportes, turismo, entretenimiento, arte, entre otras.
+								</div>								
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td>
+						<table border="0">
+						<tr>
+							<td align="center" width="50%">
+								<div align="left" class="Texto">
+									Monitoreo de Sitios Web	<a name="Web">&nbsp;</a>							
+								</div>								
+								<div align="left" class="Texto2">
+									Búsqueda de información de temas encomendados en muchos portales existentes de información general y especializados en temas como política, moda, espectáculos, cultura, salud, deportes, por mencionar algunos.
+								</div>
+							</td>
+							<td width="50%">
+								<br>
+								<div>
+									<img src="images/monitoreo_web.jpg" width="423" height="276"><br>
+								</div>
+								<br>
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td>
+						<table border="0" background="images/monitoreo_socialmedia.jpg" width="1200" height="388">
+						<tr>
+							<td align="center" width="50%">
+							&nbsp;
+							</td>
+							<td align="center" width="50%">
+								<div align="left" class="Texto">
+									Monitoreo de Redes Sociales<a name="Social">&nbsp;</a>								
+								</div>
+								<div align="left" class="Texto2">
+									<ul>
+										<li>Segmentación a nivel de género, competencia, keywords, influenciadores, intervalos de tiempo, entre otras características.</li>
+										<li>Capacidad de moderación de contenidos, con la finalidad de garantizar una mayor asertividad en la data.</li>
+										<li>Rankeo integral (tu posicionamiento y el de tus competidores ante búsquedas).</li>
+										<li>Análisis Estratégico.</li>
+								</div>
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style=" width:1200px; height:400px; background-image:url(images/analisis_separador.jpg);">						
+						&nbsp;			
+					</td>
+				</tr>
+				<tr bgcolor="#F0EFE6">
+					<td>
+						<table border="0" background="images/cobertura.png" height="520" width="1200" cellpadding="0" cellspacing="0" valign="top">
+						<tr>
+							<td width="40%" style="vertical-align: top">
+								<div align="left" class="Texto">
+									Análisis de Información								
+								</div>
+								<div align="left" class="Texto2">
+									<b>Análisis de Contenido :</b><a name="Contenido">&nbsp;</a>
+								</div>								
+								<div align="left" class="Texto2">
+									Nuestros análisis se realizan en función de lo que tú necesitas; para ello, se hace un estudio con el que, entre otras variables, se determina la cantidad de notas positivas, negativas, neutras; el rating de los programas en los cuales se transmitió, el tipo de público al que se impactó, costos-beneficios, del propio y de la competencia. Se elaboran gráficas para la mejor comprensión del estudio.
+								</div>
+							</td>
+							<td width="5%" style="vertical-align: top">
+								&nbsp;
+							</td>
+							<td width="55%" style="vertical-align: top">
+								<div align="left" class="Texto2">
+									<b><br>Análisis de Cobertura Mediática :</b><a name="Mediatico">&nbsp;</a>
+								</div>								
+								<div align="left" class="Texto2">
+									Estos estudios están centrados básicamente en los medios de impacto visual como la televisión, periódicos, revistas e internet. El objetivo central es determinar los momentos y espacios en que aparece el objeto del estudio para finalmente evaluar los costos por esas publicidades que no generaron costos directos.
+								</div>
+								<br>
+							</td>							
+						</tr>
+						</table>
+					</td>
+				</tr>				
+			</table>
+			<!-- Footer **** Para todas las paginas ******* --->
+			<!--#include virtual="footer.html" -->
+			<!-- Termina Footer  -->
+		</td>
+		<td valign="top"><img src="images/vertical_derecha.png" width="55" height="100%"></td>
+	</tr>
+</table>
+</body>
+</html>

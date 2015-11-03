@@ -1,0 +1,68 @@
+body {text-align:center;margin:0; background:#F0EFE6;}
+a {color: #FFFFFF;}
+a:link {
+    text-decoration: none;
+}
+
+.header { background-image: url(../images/header.jpg); width:1200px; height:174px;}
+.header_interno { background-image: url(../images/header_interno.jpg); width:1200px; height:174px;}
+.titulo_footer {color:white; font-size: 20px; text-align: left; font-family:Optima;}
+.footer {color:white; font-size: 17px; text-align: left; font-family:Trebuchet MS;}
+.footer1 {color:white; font-size: 14px; font-family:Trebuchet MS;}
+.Texto {color:#00659B; font-size: 30px; margin: 25px; font-family:Optima;}
+.Texto1 {color:#666666; font-size: 25px; margin: 25px; font-family:Trebuchet MS;}
+.Texto_Titulo {color:#00659B; font-size: 22px; margin: 25px; font-family:Optima;}
+.Texto2 {color:#666666; font-size: 18px; margin: 25px; font-family:Trebuchet MS;}
+.login {color:#00659B; float: right; font-size: 25px; margin-top: 20px; margin-right: 50px; font-family:Trebuchet MS;}
+.submenu {color:#00659B; font-size: 13px; font-family:Trebuchet MS; float:left; margin-left: 20px;}
+.submenu a {color:#00659B; font-size: 12px; margin-left: 10px; font-family:Verdana;}
+.submenu a:hover {color:#E0E0E0;}
+.menu {height:45px; background-color:#00659B;}
+
+/*---------------- Campos de Login ----------------*/
+.inputs {
+    width: 120px;
+    padding: 6px 8px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #00659B;
+    background: #B0AFAB;
+    border: 1px solid #00659B;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50);
+}
+.inputs:focus {
+    background: #666666;
+    color: white;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+    outline: 0;
+}
+.inputs:hover {
+    background: #666666;
+    color: white;
+}
+/***FIRST STYLE THE BUTTON***/ 
+.gobutton{
+	cursor: pointer; /*forces the cursor to change to a hand when the button is hovered*/ 
+	padding: 2px 12px; /*add some padding to the inside of the button*/ 
+	background: #00659B; /*the colour of the button*/ 
+	border:1px solid #666666; /*required or the default border for the browser will appear*/ 	
+	/*give the button a drop shadow*/ 
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	box-shadow: 0 0 4px rgba(0,0,0, .75);
+	/*style the text*/ 
+	color:#C0C0C0;
+	font-size:0.7em;
+}
+.gobutton:hover, input#gobutton:focus{
+background-color: #00008B; /*make the background a little darker*/
+/*reduce the drop shadow size to give a pushed button effect*/ 
+-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 1px rgba(0,0,0, .75); 
+box-shadow: 0 0 1px rgba(0,0,0, .75);
+}

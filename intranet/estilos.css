@@ -1,0 +1,241 @@
+.fondo { 
+	
+	background-image: url(http://operamedios.com.mx/images/fondo.gif); 
+	background-position: top center;
+
+
+}
+
+.td-tabla2{
+ background-color: #f47b20;
+ text-align: center;
+ vertical-align: middle;
+ color: #ffffff;
+
+ FONT-FAMILY: tahoma;
+ FONT-SIZE: 7pt;
+ text-transform: uppercase;
+}
+
+
+.fecha {
+	COLOR: #004d5f; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 8pt; 
+}
+A.fecha:link {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.fecha:visited {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.fecha:hover {
+	COLOR: #f57b21; TEXT-DECORATION: underline
+}
+
+
+.menu{
+	COLOR: #2b4f71; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 10pt; 
+}
+A.menu:link {
+	COLOR: #2b4f71; TEXT-DECORATION: underline; FONT-WEIGHT: bold
+}
+A.menu:visited {
+	COLOR: #2b4f71; TEXT-DECORATION: underline; FONT-WEIGHT: bold
+}
+A.menu:hover {
+	COLOR: #e21b31; TEXT-DECORATION: none; FONT-WEIGHT: bold
+}
+
+.menu-rojo{
+	COLOR: #e21b31; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 14pt; 
+}
+
+.desarrollo {
+	COLOR: #2b4f71; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 11pt; 
+}
+A.desarrollo:link {
+	COLOR: #933838; TEXT-DECORATION: underline
+}
+A.desarrollo:visited {
+	COLOR: #933838; TEXT-DECORATION: underline
+}
+A.desarrollo:hover {
+	COLOR: #2b4f71; TEXT-DECORATION: none; FONT-WEIGHT: bold
+}
+
+.desarrollo-rojo {
+	COLOR: #e21b31; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 10pt; 
+}
+
+
+
+
+.desarrollo1 {
+	COLOR: #2b4f71; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 10pt; 
+}
+A.desarrollo1:link {
+	COLOR: #933838; TEXT-DECORATION: underline
+}
+A.desarrollo1:visited {
+	COLOR: #933838; TEXT-DECORATION: underline
+}
+A.desarrollo1:hover {
+	COLOR: #2b4f71; TEXT-DECORATION: none; 
+}
+
+
+.desarrollo2 {
+	COLOR: #2b4f71; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 9pt; 
+}
+A.desarrollo2:link {
+	COLOR: #933838; TEXT-DECORATION: underline
+}
+A.desarrollo2:visited {
+	COLOR: #933838; TEXT-DECORATION: underline
+}
+A.desarrollo2:hover {
+	COLOR: #2b4f71; TEXT-DECORATION: none; 
+}
+
+.desarrollo2-rojo {
+	COLOR: #e21b31; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 8pt; 
+}
+
+.titulo-azul {
+	COLOR: #2b4f71; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 13pt; 
+}
+
+.titulo {
+	COLOR: #ffffff; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 10pt; 
+}
+A.titulo:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.titulo:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.titulo:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline; 
+}
+
+
+.titulo-news {
+	COLOR: #2b4f71; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 12pt; 
+}
+A.titulo-news:link {
+	COLOR: #2b4f71; TEXT-DECORATION: none
+}
+A.titulo-news:visited {
+	COLOR: #2b4f71; TEXT-DECORATION: none
+}
+A.titulo-news:hover {
+	COLOR: #e21e32; TEXT-DECORATION: underline; 
+}
+
+
+.titulo-rojo {
+	COLOR: #e21b31; FONT-FAMILY: calibri,tahoma, Helvetica, sans-serif; FONT-SIZE: 14pt; 
+}
+
+
+menu-navega:link {
+	COLOR: #ffffff; TEXT-DECORATION: none; FONT-WEIGHT: bold;
+}
+A.menu-navega:link {
+	COLOR: #ffffff; TEXT-DECORATION: none; FONT-WEIGHT: bold;
+}
+A.menu-navega:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none; FONT-WEIGHT: bold;
+}
+A.menu-navega:hover {
+	COLOR: #933838; TEXT-DECORATION: underline; FONT-WEIGHT: bold;
+}
+
+
+
+
+
+
+.cabe{
+	COLOR: #2b4f71; FONT-FAMILY: calibri, tahoma; FONT-SIZE: 11pt; 
+}
+
+.pie {
+	COLOR: #294e6f; FONT-FAMILY: tahoma; FONT-SIZE: 7pt;    
+}
+A.pie:link {
+	COLOR: #e21b31; TEXT-DECORATION: underline
+}
+A.pie:visited {
+	COLOR: #e21b31; TEXT-DECORATION: underline
+}
+A.pie:hover {
+	COLOR: #294e6f; TEXT-DECORATION: none
+}
+
+
+
+.label1 {
+	COLOR: #004d5f; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 8pt; 
+}
+A.label1:link {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.label1:visited {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.label1:hover {
+	COLOR: #e21b31; TEXT-DECORATION: underline
+}
+
+.label2 {
+	COLOR: #004d5f; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 9pt; 
+}
+A.label2:link {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.label2:visited {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.label2:hover {
+	COLOR: #e21b31; TEXT-DECORATION: underline
+}
+
+
+.titulo_grande {
+	COLOR: #828bd0; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica, sans-serif; FONT-SIZE: 22pt; 
+}
+A.titulo_grande:link {
+	COLOR: #828bd0; TEXT-DECORATION: none
+}
+A.titulo_grande:visited {
+	COLOR: #828bd0; TEXT-DECORATION: none
+}
+A.titulo_grande:hover {
+	COLOR: #e21b31; TEXT-DECORATION: underline
+}
+
+.fecha1 {
+	COLOR: #828287; FONT-FAMILY: tahoma, Helvetica, sans-serif;; FONT-SIZE: 8pt;
+}
+A.fecha1:link {
+	COLOR: #828287; TEXT-DECORATION: none
+}
+A.fecha1:visited {
+	COLOR: #828287; TEXT-DECORATION: none
+}
+A.fecha1:hover {
+	COLOR: #828287; TEXT-DECORATION: underline
+}
+
+.label_red {
+	COLOR: #e21b31; FONT-FAMILY: tahoma, Helvetica, sans-serif; FONT-SIZE: 9pt; 
+}
+A.label_red:link {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.label_red:visited {
+	COLOR: #004d5f; TEXT-DECORATION: none
+}
+A.label_red:hover {
+	COLOR: #e21b31; TEXT-DECORATION: underline
+}

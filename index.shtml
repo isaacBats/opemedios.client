@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="OPERAMEDIOS">
+	<meta charset="UTF-8">
+	<title>OPEMEDIOS.COM.MX</title>
+	<script src="js/banner.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/opm.css" type="text/css" media="screen">
+	<style>		
+		a.boton1 { background-image: url('images/botones_navegacion/inicio_down.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton1:hover { background-image: url('images/botones_navegacion/inicio_over.jpg');}
+		a.boton2 { background-image: url('images/botones_navegacion/quienes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton2:hover { background-image: url('images/botones_navegacion/quienes_over.jpg');}
+		a.boton3 { background-image: url('images/botones_navegacion/servicios_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton3:hover { background-image: url('images/botones_navegacion/servicios_over.jpg');}
+		a.boton4 { background-image: url('images/botones_navegacion/clientes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton4:hover { background-image: url('images/botones_navegacion/clientes_over.jpg');}
+		a.boton5 { background-image: url('images/botones_navegacion/noticias_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton5:hover { background-image: url('images/botones_navegacion/noticias_over.jpg');}		
+	</style>
+</head>
+
+<body cellpadding="0" cellspacing="0" onload="alternar_banner()">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#E0E0E0" align="center">
+	<tr>
+		<td valign="top"><img src="images/vertical_izquierda.jpg" width="55" height="1245"></td>
+		<td valign="top">
+			<!-- Inicia Header -->
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr bgcolor="#00659B">
+					<td valign="top">
+						<div class="header">
+							<div class="login"><b>Acceso a Clientes :</b>
+								<form id="form1" name="form1" method="post" action="/intranet/login_usr.php">
+								<table width="100%">
+									<tr>
+										<td><input type="text" name="username" maxlength="12" class="inputs" placeholder="Usuario:"></td>
+									</tr>
+									<tr>								
+										<td><input type="password" name="password" maxlength="20" class="inputs" placeholder="Contraseña:"></td>
+									</tr>
+									<tr>
+										<td><input type="submit" value="Ingreso" class="gobutton"></td>
+									</tr>
+								</table>
+								</form>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td valign="center" align="left">
+						<div class="menu">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a class="boton1" href="/"></a>						
+						&nbsp;&nbsp;
+						<a class="boton2" href="quienes.shtml"></a>				
+						&nbsp;&nbsp;
+						<a class="boton3" href="servicios.shtml"></a>						
+						&nbsp;&nbsp;
+						<a class="boton4" href="clientes.shtml"></a>
+						&nbsp;&nbsp;
+						<a class="boton5" href="noticias.shtml"></a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!--    FIN del Header  -->
+			<table cellpadding="0" cellspacing="0" border="0" width="1200">
+				<tr bgcolor="#F0EFE6" height="500">
+					<td>
+					<table>
+						<tr>
+							<td align="center" width="50%">
+								<div align="left" class="Texto">
+									Somos una empresa especializada en el monitoreo de medios y análisis de información, con veinte años de experiencia.<br>								
+								</div>
+								<div align="left" class="Texto1">
+										<b>Algunos de nuestros servicios :</b>
+										<ul>
+										<li>Monitoreo de Medios.</li>
+										<li>Análisis de Cobertura Mediática. (marcas, campañas, patrocinios, etc.)</li>
+										</ul>
+								</div>
+								<br>
+								<div>
+									<a href="noticias.shtml"><img src="images/noticias.jpg" width="325" height="190" border="0">
+								</div>						
+							</td>
+							<td width="50%">
+								<div>
+									<img src="images/inicio_medios_timeline.gif" width="393" height="224"><br>
+								</div>
+								<br>
+								<div>
+									<img src="images/logo.png" width="531" height="226">
+								</div>
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+				<tr bgcolor="#B0AFAB" height="30">
+					<td></td>   
+				</tr>
+				<tr bgcolor="#D0CEC8" height="80">
+					<td>
+						<div id="header-ads">
+						<a name="link" id="link" href="#"><img alt="" name="banner" src="images/banner/Banner1.png" width="680" height="90" border="0"></a>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!-- Footer **** Para todas las paginas ******* --->
+			<!--#include virtual="footer.html" -->
+			<!-- Termina Footer  -->			
+		</td>
+		<td valign="top"><img src="images/vertical_derecha.jpg" width="55" height="1245"></td>
+	</tr>
+</table>
+</body>
+</html>

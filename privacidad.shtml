@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="OPERAMEDIOS">
+	<meta charset="UTF-8">
+	<title>OPEMEDIOS.COM.MX</title>
+	<link rel="stylesheet" href="css/opm.css" type="text/css" media="screen">
+	<style>		
+		a.boton1 { background-image: url('images/botones_navegacion/inicio_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton1:hover { background-image: url('images/botones_navegacion/inicio_over.jpg');}
+		a.boton2 { background-image: url('images/botones_navegacion/quienes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton2:hover { background-image: url('images/botones_navegacion/quienes_over.jpg');}
+		a.boton3 { background-image: url('images/botones_navegacion/servicios_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton3:hover { background-image: url('images/botones_navegacion/servicios_over.jpg');}
+		a.boton4 { background-image: url('images/botones_navegacion/clientes_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton4:hover { background-image: url('images/botones_navegacion/clientes_over.jpg');}
+		a.boton5 { background-image: url('images/botones_navegacion/noticias_up.jpg'); width: 140px; height: 45px; display:inline-block;}
+		a.boton5:hover { background-image: url('images/botones_navegacion/noticias_over.jpg');}
+	</style>
+</head>
+
+<body cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#E0E0E0">
+	<tr>
+		<td valign="top"><img src="images/vertical_izquierda.png" width="55" height="100%"></td>
+		<td valign="top">
+			<!-- ****        Header   **** -->
+			<!--#include virtual="header.html" -->
+			<!-- ****      FIN  Header   **** -->
+			<!-- ****    Central   **** -->
+			<table cellpadding="0" cellspacing="0" border="0" width="100%" align="left">
+				<tr bgcolor="#F0EFE6" height="100%">
+					<td width="10%">&nbsp;</td>
+					<td width="80%">
+						<div class="Texto" align="left">Aviso de privacidad</div>
+						<div class="Texto2" align="left">De acuerdo con la normativa vigente en materia de protección de datos, así como en materia de servicios de sociedad de la información y comercio electrónico, Análisis y Seguimiento Mediático, SA de CV, con domicilio en Ures 69, Colonia Roma Sur, Delegación Cuauhtémoc, cp 06760, en México, DF, (”OPEMEDIOS”) es responsable de la confidencialidad, uso y protección de la información personal de los clientes que ingresen en nuestro sitio www.operamedios.com.mx. De esta manera, el usuario también acepta poner sus datos cuando se le requieran en caso de “campos obligatorios”; en caso de que no, no será posible que acceda a sus peticiones. Opemedios se compromete al cumplimiento de su obligación de secreto de los datos de carácter personal y de su deber de tratarlos con confidencialidad, y asume, a estos efectos, las medidas de índole técnica, organizativa y de seguridad necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado, de acuerdo con lo establecido en la Ley sobre Protección de Datos de Carácter Personal, y demás legislación aplicable.</div> 
+						<div class="Texto2" align="left">Opemedios no comparte datos sensibles de nuestros clientes, como direcciones, a terceros bajo ninguna excepción.</div>
+						<div class="Texto2" align="left">Garantizamos que cualquier transmisión que se produzca de sus datos personales se hará mediante una tecnología que cumple los máximos estándares de seguridad. La comunicación entre su máquina y nuestros servidores se establece de manera encriptada. El tratamiento de los datos lo realizará solamente personal autorizado y responsable de Opemedios.</div>
+					</td>
+					<td width="10%">&nbsp;</td>
+				</tr>
+			</table>
+			<!-- Footer **** Para todas las paginas ******* --->
+			<!--#include virtual="footer.html" -->
+			<!-- Termina Footer  -->
+		</td>
+		<td valign="top"><img src="images/vertical_derecha.png" width="55" height="100%"></td>
+	</tr>
+</table>
+</body>
+</html>

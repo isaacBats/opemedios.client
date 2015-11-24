@@ -171,13 +171,13 @@
                    	<td width="200" valign="top">
                         <div class="label_red">
                        Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
-                       Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
+                       Sección: <font class="label2">'.utf8_encode($noticia->getSeccion()).'</font><br><br>
 					   Duración: <font class="label2">'.$noticia->getDuracion().'</font>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
-                       Género: <font class="label2">'.$noticia->getGenero().'</font><br>
+                       Género: <font class="label2">'.utf8_encode($noticia->getGenero()).'</font><br>
                        Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
@@ -360,13 +360,13 @@
                    	<td width="200" valign="top">
                         <div class="label_red">
                        Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
-                       Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
+                       Sección: <font class="label2">'.utf8_encode($noticia->getSeccion()).'</font><br><br>
 					   Duración: <font class="label2">'.$noticia->getDuracion().'</font>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
-                       Género: <font class="label2">'.$noticia->getGenero().'</font><br>
+                       Género: <font class="label2">'.utf8_encode($noticia->getGenero()).'</font><br>
                        Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
@@ -577,12 +577,12 @@
                    	<td width="200" valign="top">
                         <div class="label_red">
                        Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
-                       Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
+                       Sección: <font class="label2">'.utf8_encode($noticia->getSeccion()).'</font><br><br>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
-                       Género: <font class="label2">'.$noticia->getGenero().'</font><br>
+                       Género: <font class="label2">'.utf8_encode($noticia->getGenero()).'</font><br>
                        Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
@@ -797,12 +797,12 @@
                    	<td width="200" valign="top">
                         <div class="label_red">
                        Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
-                       Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
+                       Sección: <font class="label2">'.utf8_encode($noticia->getSeccion()).'</font><br><br>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
-                       Género: <font class="label2">'.$noticia->getGenero().'</font><br>
+                       Género: <font class="label2">'.utf8_encode($noticia->getGenero()).'</font><br>
                        Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
@@ -961,12 +961,12 @@
                    	<td width="200" valign="top">
                         <div class="label_red">
                        Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
-                       Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
+                       Sección: <font class="label2">'.utf8_encode($noticia->getSeccion()).'</font><br><br>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
-                       Género: <font class="label2">'.$noticia->getGenero().'</font><br>
+                       Género: <font class="label2">'.utf8_encode($noticia->getGenero()).'</font><br>
                        Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>

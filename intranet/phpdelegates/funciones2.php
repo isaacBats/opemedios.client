@@ -148,7 +148,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_electronico.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=1">'.$noticia->getEncabezado().'</a>
+                <a class="titulo_grande" href="noticia_detalle_electronico.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=1">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">
@@ -337,7 +337,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_electronico.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=2">'.$noticia->getEncabezado().'</a>
+                <a class="titulo_grande" href="noticia_detalle_electronico.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=2">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">
@@ -554,7 +554,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_prensa.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=3">'.$noticia->getEncabezado().'</a>
+                <a class="titulo_grande" href="noticia_detalle_prensa.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=3">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">
@@ -774,7 +774,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_prensa.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=4">'.$noticia->getEncabezado().'</a>
+                <a class="titulo_grande" href="noticia_detalle_prensa.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=4">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">
@@ -938,7 +938,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_internet.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=5">'.$noticia->getEncabezado().'</a>
+                <a class="titulo_grande" href="noticia_detalle_internet.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=5">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">

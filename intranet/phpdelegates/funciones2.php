@@ -156,7 +156,7 @@
                         <td width="25"></td>
                         <td width="60%" valign="top">
                         	<div class="fecha1">'.$noticia->getFecha_larga().'  --  '.$noticia->getHora().'<br>
-                          Autor: '.$noticia->getAutor().' ('.$noticia->getTipo_autor().')<br>
+                          Autor: '.utf8_encode($noticia->getAutor()).' ('.$noticia->getTipo_autor().')<br>
                           Canal: '.$noticia->getCanal().'<br><br>
                           <span class="label_red">Tema: </span><span class="label2">'.$noticia->getTema().'</span><br /><br />
                           <span class="label_red">Costo Beneficio: </span><span class="label2"><b>$ '.$noticia->getCosto().'</b></span><br />
@@ -165,12 +165,12 @@
                         <td width="40%" valign="top" align="right"><img width="130" height="65" src="http://sistema.opemedios.com.mx/data/fuentes/'.$noticia->getLogo_fuente().'" /></td>
 </tr>
                     </table><br />
-                    <div class="label2" align="justify">'.$noticia->getSintesis().'</div><br />
+                    <div class="label2" align="justify">'.utf8_encode($noticia->getSintesis()).'</div><br />
                    <table border="0">
                    <tr>
                    	<td width="200" valign="top">
                         <div class="label_red">
-                       Fuente: <font class="label2">'.$noticia->getFuente().'</font><br>
+                       Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
                        Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
 					   Duración: <font class="label2">'.$noticia->getDuracion().'</font>
                    		</div>
@@ -178,7 +178,7 @@
                     <td width="200" valign="top">
                     	<div class="label_red">
                        Género: <font class="label2">'.$noticia->getGenero().'</font><br>
-                       Sector: <font class="label2">'.$noticia->getSector().'</font><br><br>
+                       Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
                     </td>
@@ -345,7 +345,7 @@
                         <td width="25"></td>
                         <td width="60%" valign="top">
                         	<div class="fecha1">'.$noticia->getFecha_larga().'  --  '.$noticia->getHora().'<br>
-                          Autor: '.$noticia->getAutor().' ('.$noticia->getTipo_autor().')<br>
+                          Autor: '.utf8_encode($noticia->getAutor()).' ('.$noticia->getTipo_autor().')<br>
                           Estación: '.$noticia->getEstacion().'<br><br>
                           <span class="label_red">Tema: </span><span class="label2">'.$noticia->getTema().'</span><br /><br />
                           <span class="label_red">Costo Beneficio: </span><span class="label2"><b>$ '.$noticia->getCosto().'</b></span><br />
@@ -354,12 +354,12 @@
                         <td width="40%" valign="top" align="right"><img width="130" height="65" src="http://sistema.opemedios.com.mx/data/fuentes/'.$noticia->getLogo_fuente().'" /></td>
 </tr>
                     </table><br />
-                    <div class="label2" align="justify">'.$noticia->getSintesis().'</div><br />
+                    <div class="label2" align="justify">'.utf8_encode($noticia->getSintesis()).'</div><br />
                    <table border="0">
                    <tr>
                    	<td width="200" valign="top">
                         <div class="label_red">
-                       Fuente: <font class="label2">'.$noticia->getFuente().'</font><br>
+                       Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
                        Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
 					   Duración: <font class="label2">'.$noticia->getDuracion().'</font>
                    		</div>
@@ -367,7 +367,7 @@
                     <td width="200" valign="top">
                     	<div class="label_red">
                        Género: <font class="label2">'.$noticia->getGenero().'</font><br>
-                       Sector: <font class="label2">'.$noticia->getSector().'</font><br><br>
+                       Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
                     </td>
@@ -562,7 +562,7 @@
                         <td width="25"></td>
                         <td width="60%" valign="top">
                         	<div class="fecha1">'.$noticia->getFecha_larga().'<br>
-                          Autor: '.$noticia->getAutor().' ('.$noticia->getTipo_autor().')<br>
+                          Autor: '.utf8_encode($noticia->getAutor()).' ('.$noticia->getTipo_autor().')<br>
                           Página: '.$noticia->getPagina().' ('.$noticia->getTipo_pagina().')<br><br>
                           <span class="label_red">Tema: </span><span class="label2">'.$noticia->getTema().'</span><br /><br />
                           <span class="label_red">Costo Beneficio: </span><span class="label2"><b>$ '.$c_b.'</b></span><br />
@@ -571,19 +571,19 @@
                         <td width="40%" valign="top" align="right"><img width="130" height="65" src="http://sistema.opemedios.com.mx/data/fuentes/'.$noticia->getLogo_fuente().'" /></td>
 </tr>
                     </table><br />
-                    <div class="label2" align="justify">'.$noticia->getSintesis().'</div><br />
+                    <div class="label2" align="justify">'.utf8_encode($noticia->getSintesis()).'</div><br />
                    <table border="0">
                    <tr>
                    	<td width="200" valign="top">
                         <div class="label_red">
-                       Fuente: <font class="label2">'.$noticia->getFuente().'</font><br>
+                       Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
                        Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
                        Género: <font class="label2">'.$noticia->getGenero().'</font><br>
-                       Sector: <font class="label2">'.$noticia->getSector().'</font><br><br>
+                       Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
                     </td>
@@ -782,7 +782,7 @@
                         <td width="25"></td>
                         <td width="60%" valign="top">
                         	<div class="fecha1">'.$noticia->getFecha_larga().'<br>
-                          Autor: '.$noticia->getAutor().' ('.$noticia->getTipo_autor().')<br>
+                          Autor: '.utf8_encode($noticia->getAutor()).' ('.$noticia->getTipo_autor().')<br>
                           Página: '.$noticia->getPagina().' ('.$noticia->getTipo_pagina().')<br><br>
                           <span class="label_red">Tema: </span><span class="label2">'.$noticia->getTema().'</span><br /><br />
                           <span class="label_red">Costo Beneficio: </span><span class="label2"><b>$ '.$c_b.'</b></span><br />
@@ -791,19 +791,19 @@
                         <td width="40%" valign="top" align="right"><img width="130" height="65" src="http://sistema.opemedios.com.mx/data/fuentes/'.$noticia->getLogo_fuente().'" /></td>
 </tr>
                     </table><br />
-                    <div class="label2" align="justify">'.$noticia->getSintesis().'</div><br />
+                    <div class="label2" align="justify">'.utf8_encode($noticia->getSintesis()).'</div><br />
                    <table border="0">
                    <tr>
                    	<td width="200" valign="top">
                         <div class="label_red">
-                       Fuente: <font class="label2">'.$noticia->getFuente().'</font><br>
+                       Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
                        Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
                        Género: <font class="label2">'.$noticia->getGenero().'</font><br>
-                       Sector: <font class="label2">'.$noticia->getSector().'</font><br><br>
+                       Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
                     </td>
@@ -946,7 +946,7 @@
                         <td width="25"></td>
                         <td width="60%" valign="top">
                         	<div class="fecha1">'.$noticia->getFecha_larga().'<br>
-                          Autor: '.$noticia->getAutor().' ('.$noticia->getTipo_autor().')<br>
+                          Autor: '.utf8_encode($noticia->getAutor()).' ('.$noticia->getTipo_autor().')<br>
 						  URL: <a target="_blank" href="'.$noticia->getUrl().'">Ver Noticia</a><br><br>
                           <span class="label_red">Tema: </span><span class="label2">'.$noticia->getTema().'</span><br /><br />
                           <span class="label_red">Costo Beneficio: </span><span class="label2"><b>$ '.$c_b.'</b></span><br />
@@ -955,19 +955,19 @@
                         <td width="40%" valign="top" align="right"><img width="130" height="65" src="http://sistema.opemedios.com.mx/data/fuentes/'.$noticia->getLogo_fuente().'" /></td>
 </tr>
                     </table><br />
-                    <div class="label2" align="justify">'.$noticia->getSintesis().'</div><br />
+                    <div class="label2" align="justify">'.utf8_encode($noticia->getSintesis()).'</div><br />
                    <table border="0">
                    <tr>
                    	<td width="200" valign="top">
                         <div class="label_red">
-                       Fuente: <font class="label2">'.$noticia->getFuente().'</font><br>
+                       Fuente: <font class="label2">'.utf8_encode($noticia->getFuente()).'</font><br>
                        Sección: <font class="label2">'.$noticia->getSeccion().'</font><br><br>
                    		</div>
                     </td>
                     <td width="200" valign="top">
                     	<div class="label_red">
                        Género: <font class="label2">'.$noticia->getGenero().'</font><br>
-                       Sector: <font class="label2">'.$noticia->getSector().'</font><br><br>
+                       Sector: <font class="label2">'.utf8_encode($noticia->getSector()).'</font><br><br>
                        Tendencia: <font class="label2">'.$noticia->getTendencia().'</font>
                    		</div>
                     </td>

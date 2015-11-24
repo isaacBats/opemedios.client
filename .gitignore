@@ -1,2 +1,5 @@
 # Datos ignorados
 note.txt
+
+# Ignorando archivo de configuracion
+intranet/conf/db_conf.php

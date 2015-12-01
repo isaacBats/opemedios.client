@@ -410,48 +410,46 @@ function imprimeTr($id_tipo_fuente)
     {
         $new_back[].= '<tr>';
         $new_back[].= '<td rowspan="'.$tf_ns.'">'.$array_tf_nombre[$id_tipo_fuente].': '.$tf_nn.'</td>';
-        $new_back[].= '<td rowspan="'.$array_fuente_ns[$array_fuente_count[$f_count]].'">'.$array_fuente_nombre[$array_fuente_count[$f_count]].': '.$array_fuente_nn[$array_fuente_count[$f_count]].'</td>';
-        $new_back[].= '<td>'.$array_secc_nombre[$array_secc_count[$s_count]].': '.$array_secc_nn[$array_secc_count[$s_count]].'</td>';
         $new_back[].= '</tr>';
 
-        $f_count++;
-        $s_count++;
-        $s_count_f++;
+        //$f_count++;
+        //$s_count++;
+        //$s_count_f++;
 
         $output = join(" ",$new_back);
         $flag_inicio_tf = false;
         return $output;
     } // end if
 
-    if(!$flag_inicio)
-    {
-        if($array_fuente_ns[$array_fuente_count[$f_count-1]] >= $s_count_f)
-        {
-            $new_back[].= '<tr>';
-            $new_back[].= '<td>'.$array_secc_nombre[$array_secc_count[$s_count]].': '.$array_secc_nn[$array_secc_count[$s_count]].'</td>';
-            $new_back[].= '</tr>';
+    // if(!$flag_inicio)
+    // {
+    //     if($array_fuente_ns[$array_fuente_count[$f_count-1]] >= $s_count_f)
+    //     {
+    //         $new_back[].= '<tr>';
+    //         $new_back[].= '<td>'.$array_secc_nombre[$array_secc_count[$s_count]].': '.$array_secc_nn[$array_secc_count[$s_count]].'</td>';
+    //         $new_back[].= '</tr>';
 
-            $s_count++;
-            $s_count_f++;
+    //         $s_count++;
+    //         $s_count_f++;
 
-            $output = join(" ",$new_back);
-            return $output;
-        } // end if $array_fuente_ns[$array_fuente_count[$f_count-1]] >= $s_count_f
-        else
-        {
-            $new_back[].= '<tr>';
-            $new_back[].= '<td rowspan="'.$array_fuente_ns[$array_fuente_count[$f_count]].'">'.$array_fuente_nombre[$array_fuente_count[$f_count]].': '.$array_fuente_nn[$array_fuente_count[$f_count]].'</td>';
-            $new_back[].= '<td>'.$array_secc_nombre[$array_secc_count[$s_count]].': '.$array_secc_nn[$array_secc_count[$s_count]].'</td>';
-            $new_back[].= '</tr>';
+    //         $output = join(" ",$new_back);
+    //         return $output;
+    //     } // end if $array_fuente_ns[$array_fuente_count[$f_count-1]] >= $s_count_f
+    //     else
+    //     {
+    //         $new_back[].= '<tr>';
+    //         $new_back[].= '<td rowspan="'.$array_fuente_ns[$array_fuente_count[$f_count]].'">'.$array_fuente_nombre[$array_fuente_count[$f_count]].': '.$array_fuente_nn[$array_fuente_count[$f_count]].'</td>';
+    //         //$new_back[].= '<td>'.$array_secc_nombre[$array_secc_count[$s_count]].': '.$array_secc_nn[$array_secc_count[$s_count]].'</td>';
+    //         $new_back[].= '</tr>';
 
-            $f_count++;
-            $s_count++;
-            $s_count_f = 2;
+    //         $f_count++;
+    //         $s_count++;
+    //         $s_count_f = 2;
 
-            $output = join(" ",$new_back);
-            return $output;
-        } // end else
-    } // end if count > 1
+    //         $output = join(" ",$new_back);
+    //         return $output;
+    //     } // end else
+    // } // end if count > 1
 
 }// end function imprime tr
 
@@ -621,103 +619,100 @@ function WordLimiter($text,$limit=20){
 
 
 
-setlocale(LC_TIME, 'Spanish');
-$htmlcode = '<p>
-<span align="right" style="font-weight: bold; font-size:medium;">Reporte generado el '.strftime('%d de %B del %Y',strtotime( date ( "d-m-Y" , time ()))).'</span><br>
-<span style="font-weight: bold; font-size:large;">I. Par&aacute;metros del Reporte:</span><br><br>
-<table border="1" cellspacing="2" cellpadding="2">
-	<tr style="background-color:#fddde0;">
-		<th align="center" colspan="1">Monitoreo efectuado del <strong>'.strftime('%d de %B del %Y',strtotime($fecha1)).'</strong> al <strong>'.strftime('%d de %B del %Y',strtotime($fecha2)).'</strong></th>
-	</tr>
-	<tr>
-		<td>
-			<table cellspacing ="0">
-				<tr style="background-color:#eaf5f6;">
-					<th style="font-weight:bold;" align="center" colspan="1">Tema:</th>
-					<th style="font-weight:bold;" align="center" colspan="1">Tipo de Fuente</th>
-					<th style="font-weight:bold;" align="center" colspan="1">Fuente</th>
-					<th style="font-weight:bold;" align="center" colspan="1">Sección</th>
-				</tr>
-				<tr>
-					<td align="center">'.$ntema['name'].'</td>
-					<td align="center">'.$ntipofuente['name'].'</td>
-					<td align="center">'.$nfuente['name'].'</td>
-					<td align="center">'.$nseccion['name'].'</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<table cellspacing ="0">
-				<tr style="background-color:#eaf5f6;">
-					<th style="font-weight:bold;" align="center" colspan="1">Sector</th>
-					<th style="font-weight:bold;" align="center" colspan="1">Género</th>
-					<th style="font-weight:bold;" align="center" colspan="1">Tipo de Autor</th>
-					<th style="font-weight:bold;" align="center" colspan="1">Tendencia</th>
-				</tr>
-				<tr>
-					<td align="center">'.$nsector['name'].'</td>
-					<td align="center">'.$ngenero['name'].'</td>
-					<td align="center">'.$ntipoautor['name'].'</td>
-					<td align="center">'.$ntendencia['name'] .'</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
-<br><br>
+// setlocale(LC_TIME, 'Spanish');
+// $htmlcode = '<p>
+// <span align="right" style="font-weight: bold; font-size:medium;">Reporte generado el '.strftime('%d de %B del %Y',strtotime( date ( "d-m-Y" , time ()))).'</span><br>
+// <span style="font-weight: bold; font-size:large;">I. Par&aacute;metros del Reporte:</span><br><br>
+// <table border="1" cellspacing="2" cellpadding="2">
+// 	<tr style="background-color:#fddde0;">
+// 		<th align="center" colspan="1">Monitoreo efectuado del <strong>'.strftime('%d de %B del %Y',strtotime($fecha1)).'</strong> al <strong>'.strftime('%d de %B del %Y',strtotime($fecha2)).'</strong></th>
+// 	</tr>
+// 	<tr>
+// 		<td>
+// 			<table cellspacing ="0">
+// 				<tr style="background-color:#eaf5f6;">
+// 					<th style="font-weight:bold;" align="center" colspan="1">Tema:</th>
+// 					<th style="font-weight:bold;" align="center" colspan="1">Tipo de Fuente</th>
+// 					<th style="font-weight:bold;" align="center" colspan="1">Fuente</th>
+// 					<th style="font-weight:bold;" align="center" colspan="1">Sección</th>
+// 				</tr>
+// 				<tr>
+// 					<td align="center">'.$ntema['name'].'</td>
+// 					<td align="center">'.$ntipofuente['name'].'</td>
+// 					<td align="center">'.$nfuente['name'].'</td>
+// 					<td align="center">'.$nseccion['name'].'</td>
+// 				</tr>
+// 			</table>
+// 		</td>
+// 	</tr>
+// 	<tr>
+// 		<td>
+// 			<table cellspacing ="0">
+// 				<tr style="background-color:#eaf5f6;">
+// 					<th style="font-weight:bold;" align="center" colspan="1">Sector</th>
+// 					<th style="font-weight:bold;" align="center" colspan="1">Género</th>
+// 					<th style="font-weight:bold;" align="center" colspan="1">Tipo de Autor</th>
+// 					<th style="font-weight:bold;" align="center" colspan="1">Tendencia</th>
+// 				</tr>
+// 				<tr>
+// 					<td align="center">'.$nsector['name'].'</td>
+// 					<td align="center">'.$ngenero['name'].'</td>
+// 					<td align="center">'.$ntipoautor['name'].'</td>
+// 					<td align="center">'.$ntendencia['name'] .'</td>
+// 				</tr>
+// 			</table>
+// 		</td>
+// 	</tr>
+// </table>
+// <br><br>
 
-</p>';
+// </p>';
 
- echo utf8_decode($htmlcode);
+// echo utf8_decode($htmlcode);
 
 
 //estadisticas  de tipofuente/fuente/seccion
 
-$htmlcode = '<p>
-<span style="font-weight: bold; font-size:large;">II. Estadísticas:</span><br><br>
-<span style="font-size:medium; text-decoration:underline;">2.1 Tipo de Fuente / Fuente / Sección: (Número de Noticias)</span><br><br>
-<table border="1" cellspacing="0" cellpadding="3">
- <thead>
-  <tr cellspacing="0" border="0" style="background-color:#eaf5f6; font-weight:bold;">
-    <td>Tipo de Fuente</td>
-    <td>Fuente</td>
-    <td>Sección</td>
-  </tr>
- </thead>
-   ';
+// $htmlcode = '<p>
+// <span style="font-weight: bold; font-size:large;">I. Estadísticas:</span><br><br>
+// <table border="1" cellspacing="0" cellpadding="1">
+//  <thead>
+//   <tr cellspacing="0" border="0" style="background-color:#eaf5f6; font-weight:bold;">
+//     <td>Tipo de Fuente</td>
+//   </tr>
+//  </thead>
+//    ';
 
-for($i=1;$i<=5;$i++)
-{
-    $s_count_f = 1;
+// for($i=1;$i<=5;$i++)
+// {
+//     $s_count_f = 1;
     
-    llenaArreglos($i);
+//     llenaArreglos($i);
 
-    for($j=1;$j<=$tf_ns;$j++)
-    {
-        $htmlcode.= imprimeTr($i);
-    }
-    $flag_inicio_tf = true;
-}
+//      for($j=1;$j<=$tf_ns;$j++)
+//      {
+//          $htmlcode.= imprimeTr($i);
+//      }
+//     $flag_inicio_tf = true;
+// }
 
-$htmlcode.= '
-          <tr style="background-color:#fddde0; font-weight:bold;">
-                <td colspan="3" align="center">TOTAL DE NOTICIAS: '.$_2_1_totales.'</td>
-          </tr>
-        </table>
-        <br><br>
+// $htmlcode.= '
+//           <tr style="background-color:#fddde0; font-weight:bold;">
+//                 <td colspan="3" align="center">TOTAL DE NOTICIAS: '.$_2_1_totales.'</td>
+//           </tr>
+//         </table>
+//         <br><br>
 
-        </p>';
+//         </p>';
 
 
- echo utf8_decode($htmlcode);
+//  echo utf8_decode($htmlcode);
 
 
 //estadisticas  de otros atributos
 
 $htmlcode = '<p>
-<span style="font-size:medium; text-decoration:underline;">2.2 Otros Atributos: (Número de Noticias)</span><br><br>
+<span style="font-size:medium; text-decoration:underline;">1. Número de Noticias</span><br><br>
 	<table cellspacing ="0" cellpadding ="2" border="1">
 		<thead>
 				<tr style="background-color:#eaf5f6;">
@@ -788,8 +783,8 @@ echo utf8_decode($htmlcode);
 // por tema
 
 $htmlcode = '<p>
-<span style="font-weight: bold; font-size:large;">III. Noticias:</span><br><br><br>
-<span style="font-size:medium; text-decoration:underline;">3.1 Por Tema: (Número de Noticias)</span><br><br>
+<span style="font-weight: bold; font-size:large;">2. Noticias:</span><br><br><br>
+<span style="font-size:medium; text-decoration:underline;">2.1 Por Tema: (Número de Noticias)</span><br><br>
 <table border="1" cellspacing="0" cellpadding="1">
 	<thead>
 	<tr style="background-color:#eaf5f6;">
@@ -816,7 +811,7 @@ $htmlcode.= 	'
 
 
 // Detalle Noticias
-$htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">3.2 Detalle Noticias:</span><br><br>';
+$htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 Detalle Noticias:</span><br><br>';
 
         foreach($array_temas_nombre as $value => $label)
         {

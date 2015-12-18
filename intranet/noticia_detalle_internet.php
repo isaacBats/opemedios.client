@@ -197,11 +197,11 @@ $base->init();
                                                  <?php
                                                    if($isprincipal > 0)
                                                    {
-                                                       echo '<a target="_blank" href="http://sistema.operamedios.com.mx/data/noticias/internet/'.$principal->getNombre_archivo().'">'.$principal->getNombre().'</a><br>';
+                                                       echo '<a target="_blank" href="http://sistema.opemedios.com.mx/data/noticias/internet/'.$principal->getNombre_archivo().'">'.$principal->getNombre().'</a><br>';
                                                          echo'<img src="images/trans.gif" width="1" height="5" alt=""><br>';
                                                    }
                                                    foreach($arreglo_secundarios as $sec) {
-                                                        echo '<a target="_blank" href="http://sistema.operamedios.com.mx/data/noticias/internet/'.$sec->getNombre_archivo().'">'.$sec->getNombre().'</a><br>';
+                                                        echo '<a target="_blank" href="http://sistema.opemedios.com.mx/data/noticias/internet/'.$sec->getNombre_archivo().'">'.$sec->getNombre().'</a><br>';
                                                          echo'<img src="images/trans.gif" width="1" height="5" alt=""><br>';
                                                         
                                                     }

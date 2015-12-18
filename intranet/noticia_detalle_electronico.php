@@ -203,8 +203,8 @@ if($_GET['id_tipo_fuente'] == 2) {
                                                     <img src="images/pix-azul.gif" width="100%" height="1" alt=""><br>
                                                     <?php if ($isprincipal == 1){ ?>
                                                     <div align="center">
-                                                        <embed src="<?php echo "http://sistema.operamedios.com.mx/data/noticias/".$carpeta_tipo."/".$principal->getNombre_archivo(); ?>" width="570" height="350" align="middle" border="3"></embed><br>
-                                                        <a target="_blank" href="<?php echo "http://sistema.operamedios.com.mx/data/noticias/".$carpeta_tipo."/".$principal->getNombre_archivo(); ?>">Descarga Aqui</a>
+                                                        <embed src="<?php echo "http://sistema.opemedios.com.mx/data/noticias/".$carpeta_tipo."/".$principal->getNombre_archivo(); ?>" width="570" height="350" align="middle" border="3"></embed><br>
+                                                        <a target="_blank" href="<?php echo "http://sistema.opemedios.com.mx/data/noticias/".$carpeta_tipo."/".$principal->getNombre_archivo(); ?>">Descarga Aqui</a>
                                                     </div>
                                                     <?php } // end if isprincipal == 1?>
                                                     <br>
@@ -255,7 +255,7 @@ if($_GET['id_tipo_fuente'] == 2) {
                                                     <?php
                                                    
                                                     foreach($arreglo_secundarios as $sec) {
-                                                        echo '<a target="_blank" href="http://sistema.operamedios.com.mx/data/noticias/'.$carpeta_tipo.'/'.$sec->getNombre_archivo().'">'.$sec->getNombre().'</a><br>';
+                                                        echo '<a target="_blank" href="http://sistema.opemedios.com.mx/data/noticias/'.$carpeta_tipo.'/'.$sec->getNombre_archivo().'">'.$sec->getNombre().'</a><br>';
                                                          echo'<img src="images/trans.gif" width="1" height="5" alt=""><br>';
                                                         
                                                     }

@@ -251,8 +251,8 @@ $arr_color_ub = array(0=>"#E7EDF6", 1=>"#A60000");
                                                     <div align="center">
                                                       <table width="100%" border="0" cellspacing="2" cellpadding="2">
                                                         <tr>
-                                                          <td width="50%"><div align="center"><img src="http://sistema.operamedios.com.mx/data/noticias/<?php echo $carpeta_tipo."/thumbs/".$nombre_archivo_principal."_tn.jpg" ?>"><br>
-                                                              <a target="_blank" href="<?php echo "http://sistema.operamedios.com.mx/data/noticias/".$carpeta_tipo."/".$nombre_archivo_principal; ?>">Descarga Aqui</a></div></td>
+                                                          <td width="50%"><div align="center"><img src="http://sistema.opemedios.com.mx/data/noticias/<?php echo $carpeta_tipo."/thumbs/".$nombre_archivo_principal."_tn.jpg" ?>"><br>
+                                                              <a target="_blank" href="<?php echo "http://sistema.opemedios.com.mx/data/noticias/".$carpeta_tipo."/".$nombre_archivo_principal; ?>">Descarga Aqui</a></div></td>
                                                           <td align="center" width="50%">
                                                           	<!-- empienza tabla ubicación -->Ubicación:
                                                           	<table width="90" cellspacing="2" cellpadding="2" border="0">
@@ -333,11 +333,11 @@ $arr_color_ub = array(0=>"#E7EDF6", 1=>"#A60000");
                                                     <?php
                                                    if($iscontenedor == 1)
                                                    {
-                                                       echo '<a target="_blank" href="http://sistema.operamedios.com.mx/data/noticias/'.$carpeta_tipo.'/'.$contenedor->getNombre_archivo().'">Página Contenedora</a><br>';
+                                                       echo '<a target="_blank" href="http://sistema.opemedios.com.mx/data/noticias/'.$carpeta_tipo.'/'.$contenedor->getNombre_archivo().'">Página Contenedora</a><br>';
                                                          echo'<img src="images/trans.gif" width="1" height="5" alt=""><br>';
                                                    }
                                                     foreach($arreglo_secundarios as $sec) {
-                                                        echo '<a target="_blank" href="http://sistema.operamedios.com.mx/data/noticias/'.$carpeta_tipo.'/'.$sec->getNombre_archivo().'">'.$sec->getNombre().'</a><br>';
+                                                        echo '<a target="_blank" href="http://sistema.opemedios.com.mx/data/noticias/'.$carpeta_tipo.'/'.$sec->getNombre_archivo().'">'.$sec->getNombre().'</a><br>';
                                                          echo'<img src="images/trans.gif" width="1" height="5" alt=""><br>';
                                                         
                                                     }

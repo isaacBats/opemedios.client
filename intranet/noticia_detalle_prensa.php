@@ -216,7 +216,7 @@ $arr_color_ub = array(0=>"#E7EDF6", 1=>"#A60000");
 
                                     <img src="images/pix-azul.gif" width="100%" height="1" alt=""><br>
                                     <img src="images/trans.gif" width="1" height="7" alt=""><br>
-                                    <strong><?php echo $noticia->getEncabezado(); ?></strong><br>
+                                    <strong><?php echo utf8_encode($noticia->getEncabezado()); ?></strong><br>
                                     <?php echo $label_tipo; ?><br>
                                     <img src="images/trans.gif" width="1" height="7" alt=""><br>
                                     <img src="images/pix-azul.gif" width="100%" height="1" alt=""><br>
@@ -291,7 +291,7 @@ $arr_color_ub = array(0=>"#E7EDF6", 1=>"#A60000");
                                             </tr>
                                             <tr>
                                                 <td align="right" valign="top" class="desarrollo"><b>S&iacute;ntesis:</b></td>
-                                                <td class="desarrollo"><?php echo $noticia->getSintesis(); ?><br></td>
+                                                <td class="desarrollo"><?php echo utf8_encode($noticia->getSintesis()); ?><br></td>
 
                                             </tr>
                                             <tr>
@@ -303,7 +303,7 @@ $arr_color_ub = array(0=>"#E7EDF6", 1=>"#A60000");
                                             </tr>
                                             <tr>
                                                 <td class="desarrollo" align="right"><b>Autor:</b></td>
-                                                <td class="desarrollo"><?php echo $noticia->getAutor(); ?><br></td>
+                                                <td class="desarrollo"><?php echo utf8_encode($noticia->getAutor()); ?><br></td>
 
                                             </tr>
 

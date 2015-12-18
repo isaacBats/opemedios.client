@@ -133,7 +133,7 @@ $base->init();
 
                                     <img src="images/pix-azul.gif" width="100%" height="1" alt=""><br>
                                     <img src="images/trans.gif" width="1" height="7" alt=""><br>
-                                    <strong><?php echo $noticia->getEncabezado(); ?></strong><br>
+                                    <strong><?php echo utf8_encode($noticia->getEncabezado()); ?></strong><br>
                                     <?php echo $label_tipo; ?><br>
                                     <img src="images/trans.gif" width="1" height="7" alt=""><br>
                                     <img src="images/pix-azul.gif" width="100%" height="1" alt=""><br>
@@ -162,7 +162,7 @@ $base->init();
                                             </tr>
                                             <tr>
                                                 <td align="right" valign="top" class="desarrollo"><b>S&iacute;ntesis:</b></td>
-                                                <td class="desarrollo"><?php echo $noticia->getSintesis(); ?></td>
+                                                <td class="desarrollo"><?php echo utf8_encode($noticia->getSintesis()); ?></td>
                                       </tr>
                                             <tr>
                                                 <td colspan="2">
@@ -172,7 +172,7 @@ $base->init();
                                             </tr>
                                             <tr>
                                                 <td class="desarrollo" align="right"><b>Autor:</b></td>
-                                                <td class="desarrollo"><?php echo $noticia->getAutor(); ?></td>
+                                                <td class="desarrollo"><?php echo utf8_encode($noticia->getAutor()); ?></td>
                                       </tr>
 
                                             <tr>

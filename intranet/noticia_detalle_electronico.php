@@ -182,7 +182,7 @@ if($_GET['id_tipo_fuente'] == 2) {
                                                     <table width="100%" cellspacing="2" cellpadding="2">
                                                         <tr bgcolor="#FFEDE1">
                                                             <td class="desarrollo1" align="center"><b>Clave:</b> <?php echo $noticia->getId(); ?></td>
-                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?php utf8_encode(echo $noticia->getFuente()); ?></td>
+                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?php echo utf8_encode($noticia->getFuente()); ?></td>
                                                             <td class="desarrollo1" align="center"><b><?php echo $campo_tipo; ?>:</b> <?php if($_GET['id_tipo_fuente']==1) {echo $noticia->getCanal();}else {echo $noticia->getEstacion();} ?></td>
                                                             <td class="desarrollo1" align="center"><b>Fecha:</b> <?php echo $noticia->getFecha_larga(); ?> </td>
                                                             <td class="desarrollo1" align="center"><b>Hora:</b> <?php echo $noticia->getHora(); ?> hrs</td>

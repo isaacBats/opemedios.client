@@ -1,6 +1,6 @@
 <?php
 $from = "From: <prueba@opemedios.com.mx> ";
-$to = "oscar..leon@iccred.com, oscar..leon@itdmx.com, oleongochar@hotmail.com, oleongocha@gmail.com";
+$to = "klonate@gmail.com, daniel@carlos-villicana-davila.com.mx, prueba@opemedios.com.mx";
 $subject = "Prueba de correo";
 $body = "Prueba de correo desde opemedios.com";
 

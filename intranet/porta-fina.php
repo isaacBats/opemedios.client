@@ -98,10 +98,10 @@ echo '<form name="form1" method="get" action="porta-fina.php">
                                             echo "<tr>";
                                         }
                                         echo'	<td width="115" align="center">
-                                    <a target="_blank" href="image.php?pagina='.$pagina.'&id='.$row_query['imagen'].'"><img src="http://sistema.operamedios.com.mx/data/thumbs/'.$row_query['imagen'].'_pp.jpg" alt="" border="0"></a><br>
+                                    <a target="_blank" href="image.php?pagina='.$pagina.'&id='.$row_query['imagen'].'"><img src="http://sistema.opemedios.com.mx/data/thumbs/'.$row_query['imagen'].'_pp.jpg" alt="" border="0"></a><br>
                                     <table width="115" border="0" cellspacing="3" cellpadding="3" bgcolor="#FFEDE1">
                                     <tr><td valign="top" class="desarrollo1">
-                                    <b>'.$row_query['fuente'].'</b><br>'.$row_query['fecha'].'</td>
+                                    <b>'.utf8_encode($row_query['fuente']).'</b><br>'.$row_query['fecha'].'</td>
                                     <td width="10" align="right"><label>
                                     <input type="checkbox" value="'.$row_query['id'].'" name="row_id[]" id="row_id[]">
                                             </label></td></tr></table></td>';

@@ -70,7 +70,7 @@ while($tipo_fuente = $base->get_row_assoc())
         	<tr>
             	<td width="10"></td>
                 <td width="380" valign="top">
-                	<div align="center"><embed src="http://sistema.operamedios.com.mx/data/noticias/television/ID14783_783_c3.wmv" width="350" align="middle" border="2" height="250"><br><br></div>
+                	<div align="center"><embed src="http://sistema.opemedios.com.mx/data/noticias/television/ID14783_783_c3.wmv" width="350" align="middle" border="2" height="250"><br><br></div>
                     <div class="label_red">Archivos Relacionados:</div>
                     <div>&nbsp;&nbsp;&loz;&nbsp;<a class="label1" href="ejemplo.jpg">Archivo1.doc</a><br />
                     	 &nbsp;&nbsp;&loz;&nbsp;<a class="label1" href="ejemplo.jpg">Archivo2.xls</a><br />

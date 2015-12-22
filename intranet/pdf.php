@@ -29,7 +29,7 @@ foreach ($_POST['row_id'] as $value) {
             AND id_'.$_POST['action'].' = '.$value;
 $base->execute_query($query);
 $row_query = $base->get_row_assoc();
-$body .= '<img style="width: 75%;" src="http://sistema.operamedios.com.mx/data'.$carpeta.'/'.$row_query['imagen'].'"/><br>';
+$body .= '<img style="width: 75%;" src="http://sistema.opemedios.com.mx/data'.$carpeta.'/'.$row_query['imagen'].'"/><br>';
 $body .= $row_query['fuente'].'<br>';
 $body .= $row_query['fecha'].'<br>';
 $body .= '<br><br><br>';

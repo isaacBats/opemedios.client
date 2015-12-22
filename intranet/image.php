@@ -10,6 +10,6 @@
 <title>Imagen</title>
 </head>
 <body>
-<img src="http://sistema.opemedios.com.mx/data/<?php echo $_GET['pagina']?>/<?php echo $_GET['id']?>">
+<img src="http://sistema.opemedios.com.mx/data/<?php echo utf8_encode($_GET['pagina'])?>/<?php echo $_GET['id']?>">
 </body>
 </html>

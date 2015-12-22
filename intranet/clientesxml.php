@@ -154,11 +154,11 @@ function noticia_xml($dao, $id_notic, $id_tipo_fuente)
 			$new_back[].="\t".'<tiraje>'.$noticia->getTiraje().'</tiraje>'."\n";
 			$new_back[].="\t".'<url>'.$noticia->getUrl().'</url>'."\n";
 			$new_back[].="\t".'<autor>'.$noticia->getAutor().'</autor>'."\n";
-			$new_back[].="\t".'<archivo_principal>http://sistema.operamedios.com.mx/data/noticias/television/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
+			$new_back[].="\t".'<archivo_principal>http://sistema.opemedios.com.mx/data/noticias/television/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
 			$new_back[].="\t".'<archivos_secundarios>'."\n";
 			foreach($arreglo_secundarios as $sec)
 			{
-				$new_back[].="\t\t".'<archivo>http://sistema.operamedios.com.mx/data/noticias/television/'.$sec->getNombre_archivo().'</archivo>'."\n";
+				$new_back[].="\t\t".'<archivo>http://sistema.opemedios.com.mx/data/noticias/television/'.$sec->getNombre_archivo().'</archivo>'."\n";
 			}
 			$new_back[].="\t".'</archivos_secundarios>'."\n";
   
@@ -294,11 +294,11 @@ function noticia_xml($dao, $id_notic, $id_tipo_fuente)
 			$new_back[].="\t".'<tiraje>'.$noticia->getTiraje().'</tiraje>'."\n";
 			$new_back[].="\t".'<url>'.$noticia->getUrl().'</url>'."\n";
 			$new_back[].="\t".'<autor>'.$noticia->getAutor().'</autor>'."\n";
-			$new_back[].="\t".'<archivo_principal>http://sistema.operamedios.com.mx/data/noticias/radio/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
+			$new_back[].="\t".'<archivo_principal>http://sistema.opemedios.com.mx/data/noticias/radio/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
 			$new_back[].="\t".'<archivos_secundarios>'."\n";
 			foreach($arreglo_secundarios as $sec)
 			{
-				$new_back[].="\t\t".'<archivo>http://sistema.operamedios.com.mx/data/noticias/radio/'.$sec->getNombre_archivo().'</archivo>'."\n";
+				$new_back[].="\t\t".'<archivo>http://sistema.opemedios.com.mx/data/noticias/radio/'.$sec->getNombre_archivo().'</archivo>'."\n";
 			}
 			$new_back[].="\t".'</archivos_secundarios>'."\n";
   
@@ -472,11 +472,11 @@ function noticia_xml($dao, $id_notic, $id_tipo_fuente)
 			$new_back[].="\t".'<tiraje>'.$noticia->getTiraje().'</tiraje>'."\n";
 			$new_back[].="\t".'<url>'.$noticia->getUrl().'</url>'."\n";
 			$new_back[].="\t".'<autor>'.$noticia->getAutor().'</autor>'."\n";
-			$new_back[].="\t".'<archivo_principal>http://sistema.operamedios.com.mx/data/noticias/periodico/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
+			$new_back[].="\t".'<archivo_principal>http://sistema.opemedios.com.mx/data/noticias/periodico/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
 			$new_back[].="\t".'<archivos_secundarios>'."\n";
 			foreach($arreglo_secundarios as $sec)
 			{
-				$new_back[].="\t\t".'<archivo>http://sistema.operamedios.com.mx/data/noticias/periodico/'.$sec->getNombre_archivo().'</archivo>'."\n";
+				$new_back[].="\t\t".'<archivo>http://sistema.opemedios.com.mx/data/noticias/periodico/'.$sec->getNombre_archivo().'</archivo>'."\n";
 			}
 			$new_back[].="\t".'</archivos_secundarios>'."\n";
   
@@ -652,11 +652,11 @@ function noticia_xml($dao, $id_notic, $id_tipo_fuente)
 			$new_back[].="\t".'<tiraje>'.$noticia->getTiraje().'</tiraje>'."\n";
 			$new_back[].="\t".'<url>'.$noticia->getUrl().'</url>'."\n";
 			$new_back[].="\t".'<autor>'.$noticia->getAutor().'</autor>'."\n";
-			$new_back[].="\t".'<archivo_principal>http://sistema.operamedios.com.mx/data/noticias/revista/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
+			$new_back[].="\t".'<archivo_principal>http://sistema.opemedios.com.mx/data/noticias/revista/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
 			$new_back[].="\t".'<archivos_secundarios>'."\n";
 			foreach($arreglo_secundarios as $sec)
 			{
-				$new_back[].="\t\t".'<archivo>http://sistema.operamedios.com.mx/data/noticias/revista/'.$sec->getNombre_archivo().'</archivo>'."\n";
+				$new_back[].="\t\t".'<archivo>http://sistema.opemedios.com.mx/data/noticias/revista/'.$sec->getNombre_archivo().'</archivo>'."\n";
 			}
 			$new_back[].="\t".'</archivos_secundarios>'."\n";
   
@@ -781,11 +781,11 @@ function noticia_xml($dao, $id_notic, $id_tipo_fuente)
 			$new_back[].="\t".'<tiraje>'.$noticia->getTiraje().'</tiraje>'."\n";
 			$new_back[].="\t".'<url>'.$noticia->getUrl().'</url>'."\n";
 			$new_back[].="\t".'<autor>'.$noticia->getAutor().'</autor>'."\n";
-			$new_back[].="\t".'<archivo_principal>http://sistema.operamedios.com.mx/data/noticias/internet/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
+			$new_back[].="\t".'<archivo_principal>http://sistema.opemedios.com.mx/data/noticias/internet/'.$principal->getNombre_archivo().'</archivo_principal>'."\n";
 			$new_back[].="\t".'<archivos_secundarios>'."\n";
 			foreach($arreglo_secundarios as $sec)
 			{
-				$new_back[].="\t\t".'<archivo>http://sistema.operamedios.com.mx/data/noticias/internet/'.$sec->getNombre_archivo().'</archivo>'."\n";
+				$new_back[].="\t\t".'<archivo>http://sistema.opemedios.com.mx/data/noticias/internet/'.$sec->getNombre_archivo().'</archivo>'."\n";
 			}
 			$new_back[].="\t".'</archivos_secundarios>'."\n";
   

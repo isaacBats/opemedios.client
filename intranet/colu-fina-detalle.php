@@ -66,15 +66,15 @@ $pagina = 'col_fin';
 <table width="100%" border="0" cellspacing="4" cellpadding="4">
 <tr>
 	<td width="120" valign="top" class="desarrollo1">
-	<a target="_blank" href="<?php echo 'image.php?pagina='.$pagina.'&id='.$col['imagen'];?>"><img src="http://sistema.operamedios.com.mx/data/thumbs/<?php echo $col['imagen'] ?>_pp.jpg" alt="" width="120" height="140" border="0"></a><br>
+	<a target="_blank" href="<?php echo 'image.php?pagina='.$pagina.'&id='.$col['imagen'];?>"><img src="http://sistema.opemedios.com.mx/data/thumbs/<?php echo $col['imagen'] ?>_pp.jpg" alt="" width="120" height="140" border="0"></a><br>
 	<img src="images/trans.gif" width="1" height="10" alt=""><br>
-	<a href="http://sistema.operamedios.com.mx/data/col_fin/pdf/<?php echo $col['archivo']?>">Descargar Documento</a>	</td>
+	<a href="http://sistema.opemedios.com.mx/data/col_fin/pdf/<?php echo $col['archivo']?>">Descargar Documento</a>	</td>
 	<td valign="top" class="desarrollo">
-	<b><?php echo $col['titulo'] ?><br>
-	<?php echo $col['autor'] ?><br>
-	<?php echo $col['fuente'] ?></b><br><br>
+	<b><?php echo utf8_encode($col['titulo']) ?><br>
+	<?php echo utf8_encode($col['autor']) ?><br>
+	<?php echo utf8_encode($col['fuente']) ?></b><br><br>
 
-<div align="justify"><?php echo $col['contenido'] ?> </div><br><br>
+<div align="justify"><?php echo utf8_encode($col['contenido']) ?> </div><br><br>
 
 
 

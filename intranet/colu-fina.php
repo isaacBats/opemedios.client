@@ -97,12 +97,12 @@ echo '<form name="form1" method="get" action="colu-fina.php">
                                             echo "<tr>";
                                         }
                                         echo'	<td width="60">
-                                                <a href="image.php?pagina='.$pagina.'&id='.$row_query['imagen'].'"><img src="http://sistema.operamedios.com.mx/data/thumbs/'.$row_query['imagen'].'_pp.jpg" alt="" width="60" height="70" border="0"></a><br>
+                                                <a href="image.php?pagina='.$pagina.'&id='.$row_query['imagen'].'"><img src="http://sistema.opemedios.com.mx/data/thumbs/'.$row_query['imagen'].'_pp.jpg" alt="" width="60" height="70" border="0"></a><br>
                                                 </td>
                                                 <td valign="top" class="desarrollo">
-                                                <b><a href="colu-fina-detalle.php?id='.$row_query['id'].'" class="desarrollo">'.$row_query['titulo'].'</a></b><br>
-                                                '.$row_query['autor'].'<br>
-                                                '.$row_query['fuente'].'<br>
+                                                <b><a href="colu-fina-detalle.php?id='.$row_query['id'].'" class="desarrollo">'.utf8_encode($row_query['titulo']).'</a></b><br>
+                                                '.utf8_encode($row_query['autor']).'<br>
+                                                '.utf8_encode($row_query['fuente']).'<br>
                                                 </td>';
                                         $columna ++;
                                         if($columna == 6) {

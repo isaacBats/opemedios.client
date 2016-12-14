@@ -859,7 +859,7 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 								<td width="111">'.$row['fuente'].'</td>
 								<td width="30"><a href="http://sistema.opemedios.com.mx/ver_noticia_selector_ns_intranet.php?id_noticia='.$row['id_noticia'].'&id_tipo_fuente='.$row['tipo'].'">'.$row['id_noticia'].'</a></td>
 								<td width="150">'.$row['encabezado'].'</td>
-                                <td width="150">'.WordLimiter($row['sintesis'],100).'</td>                                
+                                <td width="150">'.WordLimiter( utf8_encode( $row['sintesis'] ),100).'</td>                                
 								<td width="30">'.$row['nombre_tendencia'].'</td>';
 				if ($row['tipo'] == 1) {
 					$SQL = 'Select costo from noticia_tel where id_noticia="'.$row['id_noticia'].'"';

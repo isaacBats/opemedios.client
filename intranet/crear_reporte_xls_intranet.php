@@ -832,13 +832,14 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 						<td width="150">Encabezado</td>												
 						<td width="150">Síntesis</td>
 						<td width="30">Tendencia</td>
-						<td width="30">Costo</td>
+            <td width="30">Costo</td>
+						<td width="50">Alcanse</td>
 						<td width="75">Fecha</td>
 					</tr>
                 
                 ';
             $query = array();
-            $query[] .= "SELECT tipo_fuente.descripcion AS tf, noticia.id_tipo_fuente AS tipo, noticia.id_noticia AS id_noticia, noticia.fecha AS fecha, noticia.encabezado AS encabezado, noticia.sintesis AS sintesis, tendencia.descripcion AS nombre_tendencia, fuente.nombre AS fuente
+            $query[] .= "SELECT tipo_fuente.descripcion AS tf, noticia.id_tipo_fuente AS tipo, noticia.id_noticia AS id_noticia, noticia.fecha AS fecha, noticia.encabezado AS encabezado, noticia.alcanse AS alcanse, noticia.sintesis AS sintesis, tendencia.descripcion AS nombre_tendencia, fuente.nombre AS fuente
                             FROM noticia
                             INNER JOIN asigna ON (noticia.id_noticia = asigna.id_noticia)
                             INNER JOIN fuente ON (fuente.id_fuente = noticia.id_fuente)
@@ -888,8 +889,9 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 					$SQL = 'Select costo from noticia_int where id_noticia="'.$row['id_noticia'].'"';
 					$base2->execute_query($SQL);
 					$row2 = $base2->get_row_assoc();
-					$htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
-				}
+          $htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
+        }
+				$htmlcode.= '<td width="50">'.number_format($row2['alcanse']).'</td>';
 				$htmlcode.= '<td width="75">'.$row['fecha'].'</td>
                             </tr>';
             }

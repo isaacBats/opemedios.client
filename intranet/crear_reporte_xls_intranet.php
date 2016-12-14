@@ -833,7 +833,7 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 						<td width="150">Síntesis</td>
 						<td width="30">Tendencia</td>
             <td width="30">Costo</td>
-						<td width="50">Alcanse</td>
+						<td width="50">Alcance</td>
 						<td width="75">Fecha</td>
 					</tr>
                 

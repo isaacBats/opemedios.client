@@ -1,11 +1,23 @@
 <?php
+      
+  /**
+   * Funcion con el cual 
+   * @return \PDO
+   */
+  function getPDO(){
+    
+    return new \PDO('mysql:host=localhost;dbname=opemedios_old', 'opemedios', 'opemedios');
+  }
+
+
 /*
  * Funciones que muestran las noticias
  */
  
  function muestra_noticia_grande($dao, $id_notic, $id_tipo_fuente)
  {
-	 
+   
+    $pdo = getPDO();
 	 //dependiendo del tipo de fuente se genera la tabla
 
     switch($id_tipo_fuente) {
@@ -827,6 +839,11 @@
 
         case 5: // internet
 
+
+          $new = $pdo->query("SELECT * FROM noticia_int WHERE id_noticia = $id_notic")->fetch(\PDO::FETCH_ASSOC);
+          $sector = (!$new['is_social']) ? ' sector.nombre AS sector, ' : '';
+          $isector = (!$new['is_social']) ? ' INNER JOIN sector ON (sector.id_sector=noticia.id_sector) ' : '';
+
         //hacemos consulta para la noticia de internet
             $query = "SELECT
                           noticia.id_noticia AS id_noticia,
@@ -842,10 +859,10 @@
                           noticia.id_tipo_autor AS id_tipo_autor,
                           noticia.id_genero AS id_genero,
                           fuente.nombre AS fuente,
-						  fuente.logo AS logo_fuente,
-                          seccion.nombre AS seccion,
-                          sector.nombre AS sector,
-                          tipo_fuente.descripcion AS tipo_fuente,
+						              fuente.logo AS logo_fuente,
+                          seccion.nombre AS seccion, ".
+                          $sector .
+                          " tipo_fuente.descripcion AS tipo_fuente,
                           tipo_autor.descripcion AS tipo_autor,
                           genero.descripcion AS genero,
                           noticia_int.url AS url,
@@ -863,9 +880,9 @@
                          INNER JOIN genero ON (genero.id_genero=noticia.id_genero)
                          INNER JOIN tipo_autor ON (tipo_autor.id_tipo_autor=noticia.id_tipo_autor)
                          INNER JOIN tema ON (tema.id_tema=asigna.id_tema)
-                         INNER JOIN tendencia ON (tendencia.id_tendencia=asigna.id_tendencia)
-                         INNER JOIN sector ON (sector.id_sector=noticia.id_sector)
-                         INNER JOIN seccion ON (seccion.id_seccion=noticia.id_seccion)
+                         INNER JOIN tendencia ON (tendencia.id_tendencia=asigna.id_tendencia) " .
+                         $isector .
+                         " INNER JOIN seccion ON (seccion.id_seccion=noticia.id_seccion)
                          INNER JOIN tipo_fuente ON (tipo_fuente.id_tipo_fuente=noticia.id_tipo_fuente)
 
                          WHERE

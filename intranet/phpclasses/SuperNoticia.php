@@ -44,6 +44,7 @@ class SuperNoticia
     private $tiraje;
     // exclusivos internet
     private $url;
+    private $is_social;
 
 
     function __construct($datos)
@@ -86,6 +87,7 @@ class SuperNoticia
         $this->tiraje = $datos['tiraje'];
         //internet
         $this->url = $datos['url'];
+        $this->is_social = isset($datos['is_social']) ? $datos['is_social'] : 0;
     }
 
     function  __destruct()
@@ -231,6 +233,10 @@ class SuperNoticia
 
    public function getUrl() {
        return $this->url;
+   }
+
+   public function getIsSocial() {
+       return $this->is_social;
    }
 
 

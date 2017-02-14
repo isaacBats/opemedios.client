@@ -876,9 +876,7 @@
                     FROM
                          asigna
                          INNER JOIN noticia ON (asigna.id_noticia=noticia.id_noticia)
-                         INNER JOIN empresa ON (asigna.id_empresa=empresa.id_empresa)
                          INNER JOIN fuente ON (fuente.id_fuente=noticia.id_fuente)
-                         INNER JOIN fuente_int ON (fuente_int.id_fuente=fuente.id_fuente)
                          INNER JOIN noticia_int ON (noticia_int.id_noticia=noticia.id_noticia)
                          INNER JOIN genero ON (genero.id_genero=noticia.id_genero)
                          INNER JOIN tipo_autor ON (tipo_autor.id_tipo_autor=noticia.id_tipo_autor)
@@ -894,7 +892,7 @@
 
             $dao->execute_query($query);
             $noticia = new SuperNoticia($dao->get_row_assoc());
-
+            
             // no existe costo/beneficio, procedemos a generar output
 
             $c_b = "N/D";

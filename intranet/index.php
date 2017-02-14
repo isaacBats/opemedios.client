@@ -148,7 +148,7 @@ $query_noticias =  "SELECT
 //ejecutamos query y hacemos el arreglo de id_noticia y id_tipo_fuente
 //$base->execute_query($query_noticias);
 
-/*if($base->num_rows() == 0){
+if($base->num_rows() == 0){
 	$num_noticias3 = 0;
 }
 else{
@@ -158,7 +158,7 @@ else{
 $arreglo_noti3 = array();
 while($row = $base->get_row_assoc()){
     $arreglo_noti3[$row['id_noticia']]=$row['id_tipo_fuente'];
-}*/
+}
 
 
 ?>

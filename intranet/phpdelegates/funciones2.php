@@ -1,12 +1,15 @@
 <?php
       
+  include_once("conf/db_conf.php");
   /**
    * Funcion con el cual 
    * @return \PDO
    */
   function getPDO(){
+
+    $conn = new OpmDBConf();
     
-    return new \PDO('mysql:host=localhost;dbname=opemedios_old', 'opemedios', 'opemedios');
+    return new \PDO("mysql:host={$conn->get_databaseURL()};dbname={$conn->get_databaseName()}", $conn->get_databaseUName(), $conn->get_databasePWord());
   }
 
 

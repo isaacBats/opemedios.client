@@ -867,7 +867,12 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 
             $noticias_redes = $pdo->query("SELECT n.id_noticia FROM noticia n INNER JOIN noticia_int ni ON n.id_noticia=ni.id_noticia {$jquery_where} AND ni.is_social = 1")->fetch(\PDO::FETCH_ASSOC);
 
-            echo 'Estas son las notas <pre>'; print_r(compact('query_entero', 'noticias_redes'));exit;
+            echo 'Estas son las notas <pre>'; 
+            print_r([
+                        'query_entero' => $query_entero, 
+                        'noticias_redes' => $noticias_redes
+                    ]);
+            exit;
 			// que hay en el SQL
 			//$htmlcode.='<tr><td>'.$query_entero.'</td></tr>';
             $base->execute_query($query_entero);

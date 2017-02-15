@@ -886,7 +886,7 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
                   $fuente = array_filter($arreglo_fuentes, function($font) use ($row) {
                     return $font['id'] == $row['id_fuente'];
                   });
-
+                  var_dump($fuente);
                   $htmlcode.= '<td width="111">'.$fuente['fuente'].'</td>';
                 } else {
                   $htmlcode.= '<td width="111">'.$row['fuente'].'</td>';
@@ -896,48 +896,49 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 								<td width="150">'.utf8_encode($row['encabezado']).'</td>
                                 <td width="150">'.WordLimiter( utf8_encode( $row['sintesis'] ),100).'</td>                                
 								<td width="30">'.$row['nombre_tendencia'].'</td>';
-				if ($row['tipo'] == 1) {
-					$SQL = 'Select costo from noticia_tel where id_noticia="'.$row['id_noticia'].'"';
-					$base2->execute_query($SQL);
-					$row2 = $base2->get_row_assoc();
-					$htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
-				}
-				if ($row['tipo'] == 2) {
-					$SQL = 'Select costo from noticia_rad where id_noticia="'.$row['id_noticia'].'"';
-					$base2->execute_query($SQL);
-					$row2 = $base2->get_row_assoc();
-					$htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
-				}
-				if ($row['tipo'] == 3) {
-					$SQL = 'Select costo from noticia_per where id_noticia="'.$row['id_noticia'].'"';
-					$base2->execute_query($SQL);
-					$row2 = $base2->get_row_assoc();
-					$htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
-				}
-				if ($row['tipo'] == 4) {
-					$SQL = 'Select costo from noticia_rev where id_noticia="'.$row['id_noticia'].'"';
-					$base2->execute_query($SQL);
-					$row2 = $base2->get_row_assoc();
-					$htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
-				}
-				if ($row['tipo'] == 5) {
-					$SQL = 'Select costo from noticia_int where id_noticia="'.$row['id_noticia'].'"';
-					$base2->execute_query($SQL);
-					$row2 = $base2->get_row_assoc();
+        if ($row['tipo'] == 1) {
+          $SQL = 'Select costo from noticia_tel where id_noticia="'.$row['id_noticia'].'"';
+          $base2->execute_query($SQL);
+          $row2 = $base2->get_row_assoc();
           $htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
         }
-				$htmlcode.= '<td width="50">'.number_format($row['alcanse']).'</td>';
-				$htmlcode.= '<td width="75">'.$row['fecha'].'</td>
+        if ($row['tipo'] == 2) {
+          $SQL = 'Select costo from noticia_rad where id_noticia="'.$row['id_noticia'].'"';
+          $base2->execute_query($SQL);
+          $row2 = $base2->get_row_assoc();
+          $htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
+        }
+        if ($row['tipo'] == 3) {
+          $SQL = 'Select costo from noticia_per where id_noticia="'.$row['id_noticia'].'"';
+          $base2->execute_query($SQL);
+          $row2 = $base2->get_row_assoc();
+          $htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
+        }
+        if ($row['tipo'] == 4) {
+          $SQL = 'Select costo from noticia_rev where id_noticia="'.$row['id_noticia'].'"';
+          $base2->execute_query($SQL);
+          $row2 = $base2->get_row_assoc();
+          $htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
+        }
+        if ($row['tipo'] == 5) {
+          $SQL = 'Select costo from noticia_int where id_noticia="'.$row['id_noticia'].'"';
+          $base2->execute_query($SQL);
+          $row2 = $base2->get_row_assoc();
+          $htmlcode.= '<td width="30">'.number_format($row2['costo']).'</td>';
+        }
+        $htmlcode.= '<td width="50">'.number_format($row['alcanse']).'</td>';
+        $htmlcode.= '<td width="75">'.$row['fecha'].'</td>
                             </tr>';
             }
             
             $htmlcode.= '
                 </table>
-			</td>
-		</tr>
+      </td>
+    </tr>
 </table>
 
 ';
+                echo $htmlcode; exit;
             
         } // end foreach tema
 

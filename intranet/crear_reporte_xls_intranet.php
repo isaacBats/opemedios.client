@@ -865,7 +865,7 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 
             $pdo = getPDO();
 
-            $noticias_redes = $pdo->query("SELECT n.id_noticia FROM noticia n INNER JOIN noticia_int ni ON n.id_noticia=ni.id_noticia {$jquery_where} AND ni.is_social = 1")->fetch(\PDO::FETCH_ASSOC);
+            $noticias_redes = $pdo->query("SELECT noticia.id_noticia FROM noticia INNER JOIN noticia_int ni ON noticia.id_noticia=ni.id_noticia INNER JOIN asigna ON (noticia.id_noticia = asigna.id_noticia) {$jquery_where} AND ni.is_social = 1")->fetch(\PDO::FETCH_ASSOC);
 
             echo 'Estas son las notas <pre>'; 
             print_r([

@@ -886,6 +886,7 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
                   $fuente = array_filter($arreglo_fuentes, function($font) use ($row) {
                     return $font['id'] == $row['id_fuente'];
                   });
+                  $fuente = array_values(current($fuente));
                   var_dump($fuente);
                   $htmlcode.= '<td width="111">'.$fuente['fuente'].'</td>';
                 } else {

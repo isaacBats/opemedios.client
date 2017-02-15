@@ -1,8 +1,8 @@
 <?php 
-// header('Content-type: application/vnd.ms-excel; charset=utf-8');
-// header("Content-Disposition: attachment; filename=archivo.xls");
-// header("Pragma: no-cache");
-// header("Expires: 0");
+header('Content-type: application/vnd.ms-excel; charset=utf-8');
+header("Content-Disposition: attachment; filename=archivo.xls");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 // Genera reporte de las noticias que tiene un cliente de acuerdo a determinados parametros
 //
@@ -852,7 +852,7 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
                 
                 ';
             $query = array();
-            $query[] .= "SELECT tipo_fuente.descripcion AS tf, noticia.id_tipo_fuente AS tipo, noticia.id_noticia AS id_noticia, noticia.fecha AS fecha, noticia.encabezado AS encabezado, noticia.alcanse AS alcanse, noticia.sintesis AS sintesis, tendencia.descripcion AS nombre_tendencia, fuente.nombre AS fuente
+            $query[] .= "SELECT tipo_fuente.descripcion AS tf, noticia.id_tipo_fuente AS tipo, noticia.id_noticia AS id_noticia, noticia.fecha AS fecha, noticia.encabezado AS encabezado, noticia.alcanse AS alcanse, noticia.sintesis AS sintesis, tendencia.descripcion AS nombre_tendencia, noticia.id_fuente AS id_fuente, fuente.nombre AS fuente
                             FROM noticia
                             INNER JOIN asigna ON (noticia.id_noticia = asigna.id_noticia)
                             INNER JOIN fuente ON (fuente.id_fuente = noticia.id_fuente)
@@ -867,21 +867,32 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 
             $noticias_redes = $pdo->query("SELECT noticia.id_noticia FROM noticia INNER JOIN noticia_int ni ON noticia.id_noticia=ni.id_noticia INNER JOIN asigna ON (noticia.id_noticia = asigna.id_noticia) {$jquery_where} AND ni.is_social = 1")->fetch(\PDO::FETCH_ASSOC);
 
-            echo 'Estas son las notas <pre>'; 
-            print_r([
-                        'query_entero' => $query_entero, 
-                        'noticias_redes' => $noticias_redes
-                    ]);
-            exit;
 			// que hay en el SQL
 			//$htmlcode.='<tr><td>'.$query_entero.'</td></tr>';
             $base->execute_query($query_entero);
 
             while($row = $base->get_row_assoc()){
                 $htmlcode.= '<tr align="center" style="font-size:small;">
-                                <td width="35">'.utf8_encode($row['tf']).'</td>
-								<td width="111">'.$row['fuente'].'</td>
-								<td width="30"><a href="http://sistema.opemedios.com.mx/ver_noticia_selector_ns_intranet.php?id_noticia='.$row['id_noticia'].'&id_tipo_fuente='.$row['tipo'].'">'.$row['id_noticia'].'</a></td>
+                                <td width="35">'.utf8_encode($row['tf']).'</td>';
+                if(in_array($row['id_noticia'], $noticias_redes)) {
+
+                  $arreglo_fuentes = [
+                        ['id' => 1, 'fuente' => 'Facebook'], 
+                        ['id' => 2, 'fuente' => 'Twitter'], 
+                        ['id' => 3, 'fuente' => 'Youtube'], 
+                        ['id' => 4, 'fuente' => 'Instagram'],
+                    ];
+
+                  $fuente = array_filter($arreglo_fuentes, function($font) use ($row) {
+                    return $font['id'] == $row['id_fuente'];
+                  });
+
+                  $htmlcode.= '<td width="111">'.$fuente['fuente'].'</td>';
+                } else {
+                  $htmlcode.= '<td width="111">'.$row['fuente'].'</td>';
+                }
+								
+								$htmlcode .= '<td width="30"><a href="http://sistema.opemedios.com.mx/ver_noticia_selector_ns_intranet.php?id_noticia='.$row['id_noticia'].'&id_tipo_fuente='.$row['tipo'].'">'.$row['id_noticia'].'</a></td>
 								<td width="150">'.utf8_encode($row['encabezado']).'</td>
                                 <td width="150">'.WordLimiter( utf8_encode( $row['sintesis'] ),100).'</td>                                
 								<td width="30">'.$row['nombre_tendencia'].'</td>';

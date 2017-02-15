@@ -12,6 +12,19 @@ include("phpdelegates/db_array.php");
 //llamamos la clase  Data Access Object
 include("phpdao/OpmDB.php");
 
+
+include_once("conf/db_conf.php");
+/**
+ * Funcion con el cual 
+ * @return \PDO
+ */
+function getPDO(){
+
+  $conn = new OpmDBConf();
+  
+  return new \PDO("mysql:host={$conn->get_databaseURL()};dbname={$conn->get_databaseName()}", $conn->get_databaseUName(), $conn->get_databasePWord());
+}
+
 //creamos un DAO para obtener los datos de la fuente dada mediante el metodo GET
 //recibe como parametro el resultado de la funcion
 $base = new OpmDB(genera_arreglo_BD());
@@ -849,6 +862,8 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
             $query[] .= "AND asigna.id_tema = ".$value;
             $query[] .= "ORDER BY noticia.fecha DESC, noticia.id_noticia DESC";
             $query_entero = join(" ",$query);
+
+            print_r($query_entero);exit;
 			// que hay en el SQL
 			//$htmlcode.='<tr><td>'.$query_entero.'</td></tr>';
             $base->execute_query($query_entero);

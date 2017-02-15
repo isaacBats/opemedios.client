@@ -1,8 +1,8 @@
 <?php 
-// header('Content-type: application/vnd.ms-excel; charset=utf-8');
-// header("Content-Disposition: attachment; filename=archivo.xls");
-// header("Pragma: no-cache");
-// header("Expires: 0");
+header('Content-type: application/vnd.ms-excel; charset=utf-8');
+header("Content-Disposition: attachment; filename=archivo.xls");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 // Genera reporte de las noticias que tiene un cliente de acuerdo a determinados parametros
 //
@@ -889,7 +889,6 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
                     return $font['id'] == $row['id_fuente'];
                   });
                   $fuente = array_values(current($fuente));
-                  var_dump($fuente);
                   $htmlcode.= '<td width="111">'.$fuente[1].'</td>';
                 } else {
                   $htmlcode.= '<td width="111">'.$row['fuente'].'</td>';
@@ -941,7 +940,6 @@ $htmlcode = '<p><span style="font-size:medium; text-decoration:underline;">2.2 D
 </table>
 
 ';
-                echo $htmlcode; exit;
             
         } // end foreach tema
 

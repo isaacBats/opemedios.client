@@ -1,8 +1,8 @@
 <?php 
-header('Content-type: application/vnd.ms-excel; charset=utf-8');
-header("Content-Disposition: attachment; filename=archivo.xls");
-header("Pragma: no-cache");
-header("Expires: 0");
+// header('Content-type: application/vnd.ms-excel; charset=utf-8');
+// header("Content-Disposition: attachment; filename=archivo.xls");
+// header("Pragma: no-cache");
+// header("Expires: 0");
 
 // Genera reporte de las noticias que tiene un cliente de acuerdo a determinados parametros
 //

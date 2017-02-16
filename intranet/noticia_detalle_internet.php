@@ -134,13 +134,12 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                           });
                           
                           $fuente_social = current($fuente_social);
-                          var_dump($fuente_social);exit;
-                          
-                          $genero_social = $fuente_social[2];
-                          $tipo_autor_social = $fuente_social[3];
+                          $getfuente = $fuente_social['fuente'];
+                          $genero_social = $fuente_social['genero'];
+                          $tipo_autor_social = $fuente_social['tipo_autor'];
 
                         } else {
-                          $fuente_social = $noticia->getFuente();
+                          $getfuente = $noticia->getFuente();
                           $genero_social = utf8_encode($noticia->getGenero());
                           $tipo_autor_social = $noticia->getTipo_autor();
                         }
@@ -170,7 +169,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                                                         <tr bgcolor="#FFEDE1">
                                                             <td class="desarrollo1" align="center"><b>Clave:</b> <?php echo $noticia->getId(); ?></td>
                                                             <td class="desarrollo1" align="center"><b>Fecha:</b> <?php echo $noticia->getFecha_larga(); ?></td>
-                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?= $fuente_social ?> </td>
+                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?= $getfuente ?> </td>
                                                             <td align="center" class="desarrollo1"><strong>Sección: </strong> <?php echo $noticia->getSeccion(); ?></td>
                                                       </tr>
                                                     </table>                                              </td>

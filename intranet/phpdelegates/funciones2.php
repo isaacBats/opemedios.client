@@ -956,7 +956,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_internet.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=5">'.utf8_encode($noticia->getEncabezado()).'</a>
+                <a class="titulo_grande" href="noticia_detalle_internet.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=5'.(!$new['is_social']) ? '' : '&red=red'.'">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">

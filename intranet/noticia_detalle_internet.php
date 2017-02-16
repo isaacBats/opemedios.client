@@ -129,6 +129,9 @@ $is_social = isset($_GET['red']) ? 1 : 0;
 
                         if ($is_social) {
                           $getfuente = array_filter($arreglo_fuentes, function ($fuente) use ($noticia) {
+                            
+                            var_dump(compact('fuente', 'noticia')); exit;
+
                             return $fuente['id'] == $noticia['id_fuente'];
                           });
 

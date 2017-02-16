@@ -14,6 +14,14 @@ include("phpdao/OpmDB.php");
 //iniciamos conexion a BD
 $base = new OpmDB(genera_arreglo_BD());
 $base->init();
+$is_social = isset($_GET['red']) ? 1 : 0;
+
+ $arreglo_fuentes = [
+                        ['id' => 1, 'fuente' => 'Facebook'], 
+                        ['id' => 2, 'fuente' => 'Twitter'], 
+                        ['id' => 3, 'fuente' => 'Youtube'], 
+                        ['id' => 4, 'fuente' => 'Instagram'],
+                    ];
 
 ?>
 
@@ -118,6 +126,14 @@ $base->init();
                                 $arreglo_secundarios[$archivo->getId()]=$archivo;
                             }
                         }
+
+                        if ($is_social) {
+                          $getfuente = array_filter($arreglo_fuentes, function ($fuente) use ($noticia) {
+                            return $fuente['id'] == $noticia['id_fuente'];
+                          });
+
+                          var_dump($fuente); exit;
+                        }
 						
                         ?>
 
@@ -144,7 +160,7 @@ $base->init();
                                                         <tr bgcolor="#FFEDE1">
                                                             <td class="desarrollo1" align="center"><b>Clave:</b> <?php echo $noticia->getId(); ?></td>
                                                             <td class="desarrollo1" align="center"><b>Fecha:</b> <?php echo $noticia->getFecha_larga(); ?></td>
-                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?php echo $noticia->getFuente(); ?> </td>
+                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?= ($is_social) ?  : $noticia->getFuente(); ?> </td>
                                                             <td align="center" class="desarrollo1"><strong>Sección: </strong> <?php echo $noticia->getSeccion(); ?></td>
                                                       </tr>
                                                     </table>                                              </td>

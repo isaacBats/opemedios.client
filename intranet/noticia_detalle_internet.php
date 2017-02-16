@@ -132,7 +132,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                             return $fuente['id'] == $noticia['id_fuente'];
                           });
 
-                          var_dump($fuente); exit;
+                          var_dump($getfuente); exit;
                         }
 						
                         ?>

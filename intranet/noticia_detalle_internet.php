@@ -133,7 +133,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                             return $font['id'] == $noticia->getId_fuente();
                           });
                           
-                          $fuente_social = array_values(current($fuente_social));
+                          $fuente_social = array_values(current($fuente_social))['fuente'];
 
                         } else {
                           $fuente_social = $noticia->getFuente();

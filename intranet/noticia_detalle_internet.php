@@ -128,14 +128,15 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                         }
 
                         if ($is_social) {
-                          $getfuente = array_filter($arreglo_fuentes, function ($fuente) use ($noticia) {
-                            
-                            var_dump(compact('fuente', 'noticia')); exit;
-
-                            return $fuente['id'] == $noticia['id_fuente'];
+                          
+                          $fuente_social = array_filter($arreglo_fuentes, function($font) use ($noticia) {
+                            return $font['id'] == $noticia->getId_fuente();
                           });
+                          
+                          $fuente_social = array_values(current($fuente_social));
 
-                          var_dump($getfuente); exit;
+                        } else {
+                          $fuente_social = $noticia->getFuente();
                         }
 						
                         ?>
@@ -163,7 +164,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                                                         <tr bgcolor="#FFEDE1">
                                                             <td class="desarrollo1" align="center"><b>Clave:</b> <?php echo $noticia->getId(); ?></td>
                                                             <td class="desarrollo1" align="center"><b>Fecha:</b> <?php echo $noticia->getFecha_larga(); ?></td>
-                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?= ($is_social) ?  : $noticia->getFuente(); ?> </td>
+                                                            <td class="desarrollo1" align="center"><b>Fuente:</b> <?= $fuente_social ?> </td>
                                                             <td align="center" class="desarrollo1"><strong>Sección: </strong> <?php echo $noticia->getSeccion(); ?></td>
                                                       </tr>
                                                     </table>                                              </td>

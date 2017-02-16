@@ -87,7 +87,6 @@ $base->init();
                          WHERE
                          noticia.id_noticia = ".$_GET['id_noticia'];
 
-                         print_r($query); exit;
                         $base->execute_query($query);
                         $noticia = new SuperNoticia($base->get_row_assoc());
 

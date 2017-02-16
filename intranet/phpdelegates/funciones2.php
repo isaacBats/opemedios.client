@@ -846,6 +846,7 @@
           $new = $pdo->query("SELECT * FROM noticia_int WHERE id_noticia = $id_notic")->fetch(\PDO::FETCH_ASSOC);
           $sector = (!$new['is_social']) ? ' sector.nombre AS sector, ' : '';
           $isector = (!$new['is_social']) ? ' INNER JOIN sector ON (sector.id_sector=noticia.id_sector) ' : '';
+          $varRed = (!$new['is_social']) ? '' : '&red=red';
 
         //hacemos consulta para la noticia de internet
             $query = "SELECT
@@ -956,7 +957,7 @@
 				</td>
                 <td width="500" valign="top">
                 <div>
-                <a class="titulo_grande" href="noticia_detalle_internet.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=5'.(!$new['is_social']) ? '' : '&red=red'.'">'.utf8_encode($noticia->getEncabezado()).'</a>
+                <a class="titulo_grande" href="noticia_detalle_internet.php?id_noticia='.$noticia->getId().'&id_tipo_fuente=5'.$varRed.'">'.utf8_encode($noticia->getEncabezado()).'</a>
                 </div>
                 <div>
 <table border="0" align="center" width="100%">

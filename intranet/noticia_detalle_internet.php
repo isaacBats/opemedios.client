@@ -17,10 +17,10 @@ $base->init();
 $is_social = isset($_GET['red']) ? 1 : 0;
 
  $arreglo_fuentes = [
-                        ['id' => 1, 'fuente' => 'Facebook'], 
-                        ['id' => 2, 'fuente' => 'Twitter'], 
-                        ['id' => 3, 'fuente' => 'Youtube'], 
-                        ['id' => 4, 'fuente' => 'Instagram'],
+                        ['id' => 1, 'fuente' => 'Facebook', 'genero' => 'Facebook', 'tipo_autor' => 'Facebook'], 
+                        ['id' => 2, 'fuente' => 'Twitter', 'genero' => 'Twitter', 'tipo_autor' => 'Twitter'], 
+                        ['id' => 3, 'fuente' => 'Youtube', 'genero' => 'Youtube', 'tipo_autor' => 'Youtuber'], 
+                        ['id' => 4, 'fuente' => 'Instagram', 'genero' => 'Instagram', 'tipo_autor' => 'Instagram'],
                     ];
 
 ?>
@@ -134,9 +134,13 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                           });
                           
                           $fuente_social = array_values(current($fuente_social))[1];
+                          $genero_social = $fuente_social[2];
+                          $tipo_autor_social = $fuente_social[3];
 
                         } else {
                           $fuente_social = $noticia->getFuente();
+                          $genero_social = utf8_encode($noticia->getGenero());
+                          $tipo_autor_social = $noticia->getTipo_autor();
                         }
 						
                         ?>
@@ -200,7 +204,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                                             </tr>
                                             <tr>
                                                 <td class="desarrollo" align="right"><b>Tipo de autor:</b></td>
-                                                <td class="desarrollo"><?php echo $noticia->getTipo_autor(); ?></td>
+                                                <td class="desarrollo"><?php echo $tipo_autor_social; ?></td>
                                       </tr>
                                             <tr>
                                                 <td colspan="2">
@@ -242,7 +246,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                                                     <table width="100%" cellspacing="2" cellpadding="2">
                                                         <tr bgcolor="#FFEDE1">
                                                             <td class="desarrollo1" align="center"><b>Sector:</b> <?php echo $noticia->getSector(); ?></td>
-                                                            <td class="desarrollo1" align="center"><b>G&eacute;nero:</b> <?php echo utf8_encode($noticia->getGenero()); ?></td>
+                                                            <td class="desarrollo1" align="center"><b>G&eacute;nero:</b> <?php echo $genero_social; ?></td>
                                                             <td class="desarrollo1" align="center"><b>Tendencia:</b> <?php echo $noticia->getTendencia(); ?></td>
                                                         </tr>
                                                     </table>                                                </td>

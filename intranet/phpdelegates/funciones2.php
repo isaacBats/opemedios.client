@@ -870,6 +870,7 @@
                           tipo_autor.descripcion AS tipo_autor,
                           genero.descripcion AS genero,
                           noticia_int.url AS url,
+						  noticia_int.costo AS costo,
                           tema.nombre AS tema,
                           asigna.id_tema AS id_tema,
                           tendencia.descripcion AS tendencia,
@@ -894,9 +895,17 @@
             $dao->execute_query($query);
             $noticia = new SuperNoticia($dao->get_row_assoc());
             
-            // no existe costo/beneficio, procedemos a generar output
+            // costo/beneficio
 
-            $c_b = "N/D";
+            if($noticia->getCosto() == "")
+			{
+				$c_b = "N/D";
+			}
+			else
+			{
+				$c_b = $noticia->getCosto(); 
+				$_SESSION['suma_costo']+= $noticia->getCosto();
+			}
 			
 			//hacemos consulta para obtener los datos del archivo principal y creamos objeto Archivo para asignarlo a la noticia
                         $dao->execute_query("SELECT * FROM adjunto WHERE id_noticia = ".$noticia->getId()." AND principal = 1 LIMIT 1;");

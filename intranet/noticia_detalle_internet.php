@@ -75,6 +75,7 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                           tipo_autor.descripcion AS tipo_autor,
                           genero.descripcion AS genero,
                           noticia_int.url AS url,
+						  noticia_int.costo AS costo,
                           tema.nombre AS tema,
                           asigna.id_tema AS id_tema,
                           tendencia.descripcion AS tendencia,
@@ -97,6 +98,20 @@ $is_social = isset($_GET['red']) ? 1 : 0;
 
                         $base->execute_query($query);
                         $noticia = new SuperNoticia($base->get_row_assoc());
+						
+						//costo-beneficio
+			
+						if($noticia->getCosto() == "")
+						{
+							$c_b = "N/D";
+						}
+						else
+						{
+							$c_b = $noticia->getCosto(); 
+							$_SESSION['suma_costo']+= $noticia->getCosto();
+						}
+						
+						
 
                         //hacemos consulta para obtener los datos del archivo principal y creamos objeto Archivo para asignarlo a la noticia
                         $base->execute_query("SELECT * FROM adjunto WHERE id_noticia = ".$noticia->getId()." AND principal = 1 LIMIT 1;");
@@ -173,6 +188,11 @@ $is_social = isset($_GET['red']) ? 1 : 0;
                                                             <td align="center" class="desarrollo1"><strong>Sección: </strong> <?php echo $noticia->getSeccion(); ?></td>
                                                       </tr>
                                                     </table>                                              </td>
+                                            </tr>
+											<tr>
+                                                <td width="25%" align="right" class="desarrollo"><b>Costo / Beneficio:</b></td>
+                                                <td class="desarrollo"><strong>$ <?php echo $c_b; ?></strong></td>
+
                                             </tr>
                                             <tr>
                                                 <td width="25%" align="right" class="desarrollo"><b>URL:</b></td>

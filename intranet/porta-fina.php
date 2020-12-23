@@ -37,6 +37,7 @@ where a.id_fuente = b.id_fuente and a.fecha = ".$date;
 $base->execute_query($query);
 $columna = 1;
 $pagina = 'portadas_fin';
+$pagina2 = 'financiero';
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -98,7 +99,7 @@ echo '<form name="form1" method="get" action="porta-fina.php">
                                             echo "<tr>";
                                         }
                                         echo'	<td width="115" align="center">
-                                    <a target="_blank" href="image.php?pagina='.$pagina.'&id='.$row_query['imagen'].'"><img src="http://sistema.opemedios.com.mx/data/thumbs/'.$row_query['imagen'].'_pp.jpg" alt="" border="0"></a><br>
+                                    <a target="_blank" href="image.php?pagina='.$pagina2.'&id='.$row_query['imagen'].'"><img src="http://sistema.opemedios.com.mx/data/thumbs/'.$row_query['imagen'].'_pp.jpg" alt="" border="0"></a><br>
                                     <table width="115" border="0" cellspacing="3" cellpadding="3" bgcolor="#FFEDE1">
                                     <tr><td valign="top" class="desarrollo1">
                                     <b>'.utf8_encode($row_query['fuente']).'</b><br>'.$row_query['fecha'].'</td>

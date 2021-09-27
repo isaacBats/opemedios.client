@@ -50,7 +50,7 @@ if (isset($_POST['username'])) {
   $loginUsername=$_POST['username'];
   $password=$_POST['password'];
   $MM_fldUserAuthorization = "id_tipo_usuario";
-  $MM_redirectLoginSuccess = "index.php";
+  $MM_redirectLoginSuccess = "intranet/index.php";
   $MM_redirectLoginFailed = "../index.shtml?mensaje=denegado";
   $MM_redirecttoReferrer = false;
 
@@ -69,7 +69,7 @@ if (isset($_POST['username'])) {
     //declare two session variables and assign them
     echo $_SESSION['MM_Username'] = $loginUsername;
     echo $_SESSION['MM_UserGroup'] = $loginStrGroup;
-    echo	$_SESSION['MM_Activo'] = $activo;
+    echo $_SESSION['MM_Activo'] = $activo;
     echo $_SESSION['cuenta'] = $row_query['id_cuenta'];
    
     if($activo == 1) {

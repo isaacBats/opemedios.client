@@ -45,6 +45,6 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
   if (isset($QUERY_STRING) && strlen($QUERY_STRING) > 0)
   $MM_referrer .= "?" . $QUERY_STRING;
   $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
-  header("Location: ". $MM_restrictGoTo);
+  header("Location: {$_SERVER['HTTP_ORIGIN']}/{$MM_restrictGoTo}");
   exit;
 }

@@ -63,28 +63,24 @@ if (isset($_POST['username'])) {
   if ($loginFoundUser) {
 
     $loginStrGroup  = 100;
-	$activo  = $row_query['activo'];
+    $activo  = $row_query['activo'];
     //$cuenta  = $row_query['id_cuenta'];
 
     //declare two session variables and assign them
-   echo $_SESSION['MM_Username'] = $loginUsername;
-   echo $_SESSION['MM_UserGroup'] = $loginStrGroup;
-   echo	$_SESSION['MM_Activo'] = $activo;
-   echo $_SESSION['cuenta'] = $row_query['id_cuenta'];
+    echo $_SESSION['MM_Username'] = $loginUsername;
+    echo $_SESSION['MM_UserGroup'] = $loginStrGroup;
+    echo	$_SESSION['MM_Activo'] = $activo;
+    echo $_SESSION['cuenta'] = $row_query['id_cuenta'];
    
-	if($activo == 1)
-	{
-		if (isset($_SESSION['PrevUrl']) && false) {
-		  $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];
-		}
-		header("Location: " . $MM_redirectLoginSuccess );
-		}
-		 else {
-		header("Location: ". $MM_redirectLoginFailed );
-		}
-	}
-	else
-	{
+    if($activo == 1) {
+      if (isset($_SESSION['PrevUrl']) && false) {
+		    $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];
+		  }
+		  header("Location: " . $MM_redirectLoginSuccess );
+    } else {
+		  header("Location: ". $MM_redirectLoginFailed );
+    }
+  } else {
 		header("Location: ". $MM_redirectLoginFailed );
 	}
 }

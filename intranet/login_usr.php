@@ -13,14 +13,12 @@ $base = new OpmDB(genera_arreglo_BD());
 $base->init();
 //obtenemos la informacion del usuario y creamos el objeto
 //$base->execute_query("SELECT * FROM usuario WHERE username = '".$session_usr."'");// session_usr se encuentra en los includes de sesion
-$account = new Cuenta($base->get_row_assoc());
+// $account = new Cuenta($base->get_row_assoc());
 
 if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
-{
+function GetSQLValueString($base, $theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") {
   $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+  $theValue = $base->getConnection()->real_escape_string($theValue);
 
   switch ($theType) {
     case "text":
@@ -57,7 +55,7 @@ if (isset($_POST['username'])) {
   $MM_redirecttoReferrer = false;
 
   $LoginRS__query=sprintf("SELECT id_cuenta, username, password, activo FROM cuenta WHERE username=%s AND password=%s and activo = 1",  // Se le añadio el campo activo
-  GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text"));
+  GetSQLValueString($base, $loginUsername, "text"), GetSQLValueString($base, $password, "text"));
 
   $base->execute_query($LoginRS__query);
   $row_query = $base->get_row_assoc();

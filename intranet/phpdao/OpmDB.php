@@ -11,7 +11,6 @@ class OpmDB
     private $databasePWord;
     private $databaseName;
     private $id_conexion;
-    private $id_conexion2;
     private $id_consulta;
     private $id_consulta2;
     private $id_consulta_usr;
@@ -27,7 +26,6 @@ class OpmDB
         $this->databasePWord = $datos['databasePword'];
         $this->databaseName = $datos['databaseName'];
         $this->id_conexion = 0;
-        $this->id_conexion2 = 0;
         $this->id_consulta = 0;
         $this->id_consulta2 = 0;
         $this->id_consulta_usr = 0;
@@ -37,21 +35,20 @@ class OpmDB
     }
 
 
-    function  __destruct()
-    {
-        ;
-    }
-
     function get_error()
     {
         return "Error ".$this->errorno."  ->  ".$this->error;
+    }
+
+    public function getConnection() {
+        return $this->id_conexion;
     }
 
 
     //inicia la base de datos
     function init()
     {
-        $this->id_conexion = mysql_connect($this->databaseURL, $this->databaseUName, $this->databasePWord) or die("Hubo error al conectarse a la base");
+        $this->id_conexion = new mysqli($this->databaseURL, $this->databaseUName, $this->databasePWord, $this->databaseName);
         //revisa si hubo error en al conexión
         if(!$this->id_conexion)
         {
@@ -59,13 +56,6 @@ class OpmDB
             return 0;
         }
 
-        $db = mysql_select_db($this->databaseName, $this->id_conexion);
-        //revisa si hubo error al seleccionar la base de datos
-        if(!$db)
-        {
-            $this->Error = "Error al abrir la base de datos:  ".$this->databaseName;
-            return 0;
-        }
         //si todo sale bien nos regresa el id de la conexion
         return $this->id_conexion;
     }
@@ -73,7 +63,7 @@ class OpmDB
     //cierra la conexion a la base de datos
     function close()
     {
-        mysql_close($this->id_conexion);
+        mysqli_close($this->id_conexion);
     }
 
     //ejecuta consultas
@@ -86,11 +76,11 @@ class OpmDB
         }
 
         //ejecutar consulta
-        $this->id_consulta = mysql_query($query,$this->id_conexion) or die("Hubo el siguiente error al ejecutar la consulta: <br>".mysql_error()." ".mysql_errno()."<br>La consulta fue la siguiente<br>".$query);
+        $this->id_consulta = mysqli_query($this->id_conexion, $query) or die("Hubo el siguiente error al ejecutar la consulta: <br>".mysqli_error()." ".mysqli_errno()."<br>La consulta fue la siguiente<br>".$query);
         if(!$this->id_consulta)
         {
-            $this->errorno = mysql_errno();
-            $this->error = mysql_error();
+            $this->errorno = mysqli_errno();
+            $this->error = mysqli_error();
             return 0;
         }
         //Si todo sale chido
@@ -100,7 +90,7 @@ class OpmDB
     //regresa el numero de registros de la consulta actual
     function num_rows()
     {
-        return mysql_num_rows($this->id_consulta);
+        return mysqli_num_rows($this->id_consulta);
     }
 
     // regresa el nombre del campo del arreglo
@@ -117,8 +107,12 @@ class OpmDB
 
     // muestra la info de la fila en arreglo asociativo
     function get_row_assoc()
-    {
-        return mysql_fetch_assoc($this->id_consulta);
+    {   
+        if($this->id_consulta){
+            return mysqli_fetch_assoc($this->id_consulta);
+        }
+
+        return null;
     }
 
     //consulta2
@@ -145,7 +139,7 @@ class OpmDB
     //regresa el numero de registros de la consulta actual
     function num_rows2()
     {
-        return mysql_num_rows($this->id_consulta2);
+        return mysqli_num_rows($this->id_consulta2);
     }
 
     // regresa el nombre del campo del arreglo
@@ -163,10 +157,10 @@ class OpmDB
     // muestra la info de la fila en arreglo asociativo
     function get_row_assoc2()
     {
-        return mysql_fetch_assoc($this->id_consulta2);
+        return mysqli_fetch_assoc($this->id_consulta2);
     }
 
-     function free_result2()
+    function free_result2()
     {
         mysql_free_result($this->id_consulta2);
     }
@@ -231,7 +225,4 @@ class OpmDB
     }
 
 
-}//end class
-
-
-?>
+}

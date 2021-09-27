@@ -67,10 +67,10 @@ if (isset($_POST['username'])) {
     //$cuenta  = $row_query['id_cuenta'];
 
     //declare two session variables and assign them
-    echo $_SESSION['MM_Username'] = $loginUsername;
-    echo $_SESSION['MM_UserGroup'] = $loginStrGroup;
-    echo $_SESSION['MM_Activo'] = $activo;
-    echo $_SESSION['cuenta'] = $row_query['id_cuenta'];
+    $_SESSION['MM_Username'] = $loginUsername;
+    $_SESSION['MM_UserGroup'] = $loginStrGroup;
+    $_SESSION['MM_Activo'] = $activo;
+    $_SESSION['cuenta'] = $row_query['id_cuenta'];
    
     if($activo == 1) {
       if (isset($_SESSION['PrevUrl']) && false) {

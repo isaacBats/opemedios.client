@@ -13,5 +13,3 @@ function genera_arreglo_BD()
 
     return $arreglo;
 }
-
-?>

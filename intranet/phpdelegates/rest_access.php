@@ -3,7 +3,7 @@
  * Restringe el acceso a usuarios no autorizados
  */
 if (!isset($_SESSION)) {
-  session_start();
+  //session_start();
   $session_usr = $_SESSION['MM_Username'];
   $scuenta = $_SESSION['cuenta'];
 }
@@ -48,4 +48,3 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
   header("Location: ". $MM_restrictGoTo);
   exit;
 }
-?>

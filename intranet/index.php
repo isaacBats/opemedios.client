@@ -19,11 +19,7 @@ include("phpdao/OpmDB.php");
 //iniciamos conexion a BD
 $base = new OpmDB(genera_arreglo_BD());
 $base->init();
-
-
-
 ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>

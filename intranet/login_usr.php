@@ -88,4 +88,3 @@ if (isset($_POST['username'])) {
 		header("Location: ". $MM_redirectLoginFailed );
 	}
 }
-?>

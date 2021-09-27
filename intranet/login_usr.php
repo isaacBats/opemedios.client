@@ -76,11 +76,11 @@ if (isset($_POST['username'])) {
       if (isset($_SESSION['PrevUrl']) && false) {
 		    $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];
 		  }
-		  header("Location: " . $MM_redirectLoginSuccess );
+		  header("Location:  {$_SERVER['HTTP_ORIGIN']}/{$MM_redirectLoginSuccess}" );
     } else {
-		  header("Location: ". $MM_redirectLoginFailed );
+		  header("Location: {$_SERVER['HTTP_ORIGIN']}/$MM_redirectLoginFailed" );
     }
   } else {
-		header("Location: ". $MM_redirectLoginFailed );
+		header("Location: {$_SERVER['HTTP_ORIGIN']}/$MM_redirectLoginFailed" );
 	}
 }
